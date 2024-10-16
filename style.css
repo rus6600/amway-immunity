@@ -1,22 +1,126 @@
-*  {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Roboto Condensed,sans-serif;
+    font-family:
+        Roboto Condensed,
+        sans-serif;
 }
 
 :root {
     --containerWidth: 1200px;
+    --immunity-clr-primary: #006d47;
+    --immunity-clr-secondary: #1a6349;
+    --immunity-clr-black: #000000;
 }
 
-.container {
+.immunity-container {
     width: min(100%, var(--containerWidth));
-    margin-inline: auto
+    margin-inline: auto;
+}
+
+.immunity-header {
+    display: grid;
+    grid-template-areas:
+        '.         flower'
+        'shield    flower'
+        'title     flower'
+        'subtitle  flower'
+        "subtitle      ."
+
+    ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1.3fr;
+
+    row-gap: 1rem;
+}
+
+.immunity-header__shield {
+    align-self: center;
+}
+
+.immunity-header_title {
+    grid-area: title;
+    font-weight: 400;
+    font-size: 88.86px;
+    align-self: flex-start;
+
+    color: var(--immunity-clr-primary);
+    line-height: 0.8;
+
+}
+
+.immunity-header__subtitle {
+    position: relative;
+    grid-area: subtitle;
+    align-self: flex-end;
+    font-size: 53.86px;
+    font-weight: 400;
+    color: var(--immunity-clr-primary);
+
+}
+
+.immunity-header__subtitle::after {
+    content: url('assets/Vector\ 1.png');
+    position: absolute;
+    top: -270px;
+    left: -40px;
+
+}
+
+.immunity-header__subtitle::before {
+    content: url('assets/Vector\ 3.png');
+    position: absolute;
+    top: 35px;
+    left: 355px;
+
+}
+
+.immunity-header__shield {
+    grid-area: shield;
+}
+
+.immunity-header__flower {
+    margin-top: 30px;
+    grid-area: flower;
+    align-self: center;
+}
+
+.immunity-world-inside {
+    display: grid;
+    /* margin-top: 20rem; */
+    grid-template-areas:
+        'text-upper  . .'
+        '. .  image-right'
+        'image-left . .'
+        '. . text-lower'
+    ;
+}
+
+.immunity-world-inside__image_right {
+    grid-area: image-right;
+}
+
+.immunity-world-inside__image_left {
+    grid-area: image-left;
 }
 
 
+.immunity-world-inside__text_upper {
+    display: flex;
+    width: 50%;
+    margin-top: 40px;
+    grid-area: text-upper;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--immunity-clr-black);
+    font-size: 17.859px;
+    line-height: 24px;
+}
 
+.immunity-world-inside__text_lower {
+    grid-area: text-lower;
 
+}
 
 .fw-400 {
     font-weight: 400;
