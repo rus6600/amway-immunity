@@ -12,55 +12,180 @@
 </head>
 
 <body>
-    <div class="immunity-container">
-        <section class="immunity-header">
-            <h1 class="immunity-header_title">Защита <br> иммунитета</h1>
-            <picture class="immunity-header__shield">
-                <source srcset="assets/shield.png" media="(max-width: 600px)" />
-                <img src='assets/shield_desktop.png' alt="shield image" height="120" width="120" />
-            </picture>
-            <picture class="immunity-header__flower">
-                <source srcset="assets/flower.png" media="(max-width: 600px)" />
-                <img src='assets/flower_desktop.png' alt="shield image" height="500" width="auto" />
-            </picture>
-            <h2 class="immunity-header__subtitle">Мир внутри нас</h2>
-        </section>
-        <section class='immunity-world-inside'>
-            <div class="immunity-world-inside__text_upper">
-                <p>Мы окружены множеством организмов, которые настольно малы, что мы их
-                    просто не можем увидеть. Часть из них живёт даже внутри нас – такие
-                    микроорганизмы принято называть микрофлорой. Мы настолько привыкли
-                    к друг другу и существуем в гармонии, что просто не замечаем этого.
-                </p>
-                <p>Однако, помимо дружественной микрофлоры, есть другие микроорганизмы,
-                    желающие воспользоваться нашими ресурсами. Живя у нас, такие «гости»
-                    (патогены, например, вирусы, бактерии) вызывают множество проблем, от
-                    насморка до температуры, лихорадки и боли, ну … и так далее.
-                </p>
+    <section class="immunity-header immunity-container">
+        <h1 class="immunity-header_title">Защита <br> иммунитета</h1>
+        <picture class="immunity-header__shield">
+            <source srcset="assets/shield.png" media="(max-width: 600px)" />
+            <img src='assets/shield_desktop.png' alt="shield image" height="120" width="120" />
+        </picture>
+        <picture class="immunity-header__flower">
+            <source srcset="assets/flower.png" media="(max-width: 600px)" />
+            <img src='assets/flower_desktop.png' alt="shield image" height="500" width="auto" />
+        </picture>
+        <h2 class="immunity-header__subtitle">Мир внутри нас</h2>
+    </section>
+    <section class='immunity-world-inside immunity-container'>
+        <div class="immunity-world-inside__text_upper">
+            <p>Мы окружены множеством организмов, которые настольно малы, что мы их
+                просто не можем увидеть. Часть из них живёт даже внутри нас – такие
+                микроорганизмы принято называть микрофлорой. Мы настолько привыкли
+                к друг другу и существуем в гармонии, что просто не замечаем этого.
+            </p>
+            <p>Однако, помимо дружественной микрофлоры, есть другие микроорганизмы,
+                желающие воспользоваться нашими ресурсами. Живя у нас, такие «гости»
+                (патогены, например, вирусы, бактерии) вызывают множество проблем, от
+                насморка до температуры, лихорадки и боли, ну … и так далее.
+            </p>
+        </div>
+        <picture class="immunity-world-inside__image_right">
+            <source srcset="assets/family.png" media="(max-width: 600px)" />
+            <img src='assets/family_desktop.png' alt="shield image" width="293" />
+        </picture>
+        <picture class="immunity-world-inside__image_left">
+            <source srcset="assets/family-left.png" media="(max-width: 600px)" />
+            <img src='assets/family-left_desktop.png' alt="shield image" width="293" />
+        </picture>
+        <div class="immunity-world-inside__text_lower">
+            <h2 class="immunity-world-inside_subtitle">Как работает иммунитет?</h2>
+            <p>
+                Вирус — очень маленький патоген, в разы меньше клетки, потому что
+                клеткой он не является. Он как флешка с вредоносной информацией. Вирус
+                не живой и без клетки ничего сделать не может.
+            </p>
+            <p>
+                Цель вируса – преодолеть все защитные барьеры, проникнуть в клетку,
+                наладить там конвейерную линию производства самого себя, используя
+                индустриальные мощности клетки.
+            </p>
+        </div>
+    </section>
+    <section class="immunity-organism immunity-container">
+        <div class="immunity-organism__title clr-secondary">
+            <p>
+                Организм человека обладает сложной системой защиты, которая
+                активируется при контакте с вирусами и бактериями —
+                иммунитетом.
+            </p>
+            <p class="fw-700">Иммунитет имеет 4 линии защиты</p>
+        </div>
+        <div class="immunity-organism-fugures">
+            <figure class="immunity-organism-figure">
+                <img src="assets/shield.png" alt="shiled icon">
+                <figcaption>Барьерные <br> ткани</figcaption>
+                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
+            </figure>
+            <figure class="immunity-organism-figure">
+                <img src="assets/alert.png" alt="alert icon">
+                <figcaption>Сигнальная <br> система</figcaption>
+                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
+            </figure>
+            <figure class="immunity-organism-figure">
+                <img src="assets/cells.png" alt="cells icon">
+                <figcaption>Умные клетки <br> иммунитета</figcaption>
+                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
+            </figure>
+            <figure class="immunity-organism-figure">
+                <img src="assets/atom.png" alt="atom icon">
+                <figcaption>Синергия <br> защиты</figcaption>
+                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
+            </figure>
+        </div>
+        <div class="immunity-organism__video">
+            <div class="immunity-video-wrapper">
+                <img id="immunity-organism__video-cover" class="immunity-video-wrapper__cover"
+                    src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s4-video-bg.png" alt="">
+                <img id="immunity-organism__video-btn" class="immunity-video-wrapper_btn"  src="assets/videobtn.png" alt="" onclick="immunityVideoPlay()">
+                <iframe id="immunity-organism__video_iframe" class="immunity-video-wrapper_hideiframe" width="750" height="422"
+                    src="https://www.youtube.com/embed/glG0oWEP1G0?si=frKRq8aqXg519W-G"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            <p>Готовы узнать, как работает Ваш иммунитет?</p>
+        </div>
+    </section>
+    <section class="immunity-leafs">
+        <div class="immunity-leaf__products immunity-container">
+            <div class="immunity-leaf__product">
+                <div class="img-wrapper">
+                    <img class='immunity-leaf__product_img' src="assets/pils1.png" alt="витамин С +">
+                </div>
             </div>
-            <picture class="immunity-world-inside__image_right">
-                <source srcset="assets/family.png" media="(max-width: 600px)" />
-                <img src='assets/family_desktop.png' alt="shield image" width="293" />
-            </picture>
-            <picture class="immunity-world-inside__image_left">
-                <source srcset="assets/family-left.png" media="(max-width: 600px)" />
-                <img src='assets/family-left_desktop.png' alt="shield image" width="293" />
-            </picture>
-            <div class="immunity-world-inside__text_lower">
-                <h2 class="immunity-world-inside_subtitle">Как работает иммунитет?</h2>
-                <p>
-                    Вирус — очень маленький патоген, в разы меньше клетки, потому что
-                    клеткой он не является. Он как флешка с вредоносной информацией. Вирус
-                    не живой и без клетки ничего сделать не может.
-                </p>
-                <p>
-                    Цель вируса – преодолеть все защитные барьеры, проникнуть в клетку,
-                    наладить там конвейерную линию производства самого себя, используя
-                    индустриальные мощности клетки.
-                </p>
+            <div class="immunity-leaf__product">
+                <div class="img-wrapper">
+                    <img class='immunity-leaf__product_img' src="assets/pils2.png" alt="витамин D">
+                </div>
             </div>
-        </section>
-    </div>
+            <div class="immunity-leaf__product">
+                <div class="img-wrapper">
+                    <img class='immunity-leaf__product_img' src="assets/pils3.png" alt="Плюс">
+                </div>
+            </div>
+            <div class="immunity-leaf__product">
+                <div class="img-wrapper">
+                    <img class='immunity-leaf__product_img' src="assets/pils4.png" alt="Цинт селен">
+                </div>
+            </div>
+        </div>
+        <div class="immunity-leaf__products_desc immunity-container">
+            <div class="immunity-leaf__products_desc_text">
+                <div class="immunity-leaf__products_desc_title">
+                    <img src="assets/sign.png" alt="sign icon">
+                    <h3>Витамин С</h3>
+                </div>
+                <p>
+                    Витамин С способствует
+                    устойчивости клеток к
+                    неблагоприятным
+                    воздействиям
+                </p>
+                <button class="immunity-btn">Узнать больше</button>
+            </div>
+            <div class="immunity-leaf__products_desc_text">
+                <div class="immunity-leaf__products_desc_title">
+                    <img src="assets/sign.png" alt="sign icon">
+                    <h3>Витамин D</h3>
+                </div>
+                <p>
+                    Участвует в координации
+                    иммунного ответа
+                </p>
+                <button class="immunity-btn">Узнать больше</button>
+            </div>
+            <div class="immunity-leaf__products_desc_text">
+                <div class="immunity-leaf__products_desc_title">
+                    <img src="assets/sign.png" alt="sign icon">
+                    <h3>Эхинацея</h3>
+                </div>
+                <p>
+                    Поможет научить ваши умные
+                    иммунные клетки работать
+                </p>
+                <button class="immunity-btn">Узнать больше</button>
+            </div>
+            <div class="immunity-leaf__products_desc_text">
+                <div class="immunity-leaf__products_desc_title">
+                    <img src="assets/sign.png" alt="sign icon">
+                    <h3>Цинк + Cелен</h3>
+                </div>
+                <p>
+                    Для поддержания иммунитета,кожи и волос
+                </p>
+                <button class="immunity-btn">Узнать больше</button>
+            </div>
+        </div>
+        <div class="immunity-bg"></div>
+    </section>
+    <script>
+        function immunityVideoPlay() {
+            const cover = document.getElementById('immunity-organism__video-cover');
+            const btn = document.getElementById('immunity-organism__video-btn');
+            const iframe = document.getElementById('immunity-organism__video_iframe');
+            iframe.classList.remove('immunity-video-wrapper_hideiframe')
+            btn.classList.add('immunity-organism__video_hide')
+            iframe.src = `${iframe.src}&autoplay=1&mute=0&modestbranding=0`
+        }
+    </script>
 </body>
 
 </html>
