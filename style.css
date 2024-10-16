@@ -87,31 +87,48 @@
 
 .immunity-world-inside {
     display: grid;
-    /* margin-top: 20rem; */
     grid-template-areas:
-        'text-upper  . .'
-        '. .  image-right'
-        'image-left . .'
-        '. . text-lower'
+        'text-upper image-right image-right'
+        'text-upper image-right image-right'
+        'text-upper image-right image-right'
+        'image-left text-lower text-lower'
+        'image-left text-lower text-lower'
+        'image-left text-lower text-lower'
     ;
+    grid-template-rows: repeat(6, 145px);
+    /* grid-template-columns: 50% 1fr 1fr; */
 }
 
 .immunity-world-inside__image_right {
     grid-area: image-right;
+    grid-row: span 3;
+    align-self: flex-end;
+    justify-self: center;
+    margin-right: 20%;
+    z-index: 9999;
 }
 
 .immunity-world-inside__image_left {
+    position: relative;
     grid-area: image-left;
+    align-self: flex-start;
+    justify-self: center;
 }
 
+.immunity-world-inside__image_left::after {
+    content: url('assets/woman.png');
+    position: absolute;
+    top: -45%;
+    left: -45%;
+}
 
 .immunity-world-inside__text_upper {
     display: flex;
-    width: 50%;
-    margin-top: 40px;
     grid-area: text-upper;
+    align-self: center;
     flex-direction: column;
     gap: 12px;
+    align-self: flex-start;
     color: var(--immunity-clr-black);
     font-size: 17.859px;
     line-height: 24px;
@@ -119,8 +136,22 @@
 
 .immunity-world-inside__text_lower {
     grid-area: text-lower;
-
+    align-self: center;
+    justify-self: flex-start;
 }
+
+.immunity-world-inside_subtitle {
+    margin-bottom: 41px;
+    font-size: 53.86px;
+    color: var(--immunity-clr-primary);
+    line-height: 24px;
+}
+
+.immunity-world-inside p {
+    font-size: 17.859px;
+    line-height: 24px;
+}
+
 
 .fw-400 {
     font-weight: 400;
