@@ -87,6 +87,7 @@
 
 .immunity-world-inside {
     display: grid;
+    margin-top: 1rem;
     grid-template-areas:
         'text-upper image-right image-right'
         'text-upper image-right image-right'
@@ -121,37 +122,56 @@
     top: -45%;
     left: -45%;
 }
+.immunity-world-inside__image_left::before {
+    content: url('assets/Vector\ 5.png');
+    position: absolute;
+    top: 37%;
+    right: -27%;
+    z-index: -999;
+}
 
 .immunity-world-inside__text_upper {
     display: flex;
     grid-area: text-upper;
     align-self: center;
     flex-direction: column;
-    gap: 12px;
     align-self: flex-start;
     color: var(--immunity-clr-black);
     font-size: 17.859px;
     line-height: 24px;
 }
 
+.immunity-world-inside__text_upper p {
+    margin-top: 0;
+}
+
 .immunity-world-inside__text_lower {
     grid-area: text-lower;
-    align-self: center;
+    align-self: flex-start;
     justify-self: flex-start;
+    margin-top: 4.5rem;
 }
 
 .immunity-world-inside_subtitle {
-    margin-bottom: 41px;
     font-size: 53.86px;
+    font-weight: 400;
     color: var(--immunity-clr-primary);
     line-height: 24px;
 }
 
-.immunity-world-inside p {
+
+.immunity-world-inside__text_lower p {
+    width: 70%;
     font-size: 17.859px;
     line-height: 24px;
 }
 
+.immunity-world-inside__text_lower p:nth-of-type(1) {
+    margin-top: 2rem;
+}
+.immunity-world-inside__text_lower p:nth-of-type(2) {
+    margin-top: 2rem;
+}
 
 .fw-400 {
     font-weight: 400;
