@@ -1,191 +1,1066 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400..700&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
+    <body>
+        <section class="immunity-header immunity-container">
+            <h1 class="immunity-header_title">
+                Защита <br />
+                иммунитета
+            </h1>
+            <picture class="immunity-header__shield">
+                <source srcset="assets/shield.png" media="(max-width: 600px)" />
+                <img
+                    src="assets/shield_desktop.png"
+                    alt="shield image"
+                    height="120"
+                    width="120"
+                />
+            </picture>
+            <picture class="immunity-header__flower">
+                <source srcset="assets/flower.png" media="(max-width: 600px)" />
+                <img
+                    src="assets/flower_desktop.png"
+                    alt="shield image"
+                    height="500"
+                    width="auto"
+                />
+            </picture>
+            <h2 class="immunity-header__subtitle">Мир внутри нас</h2>
+        </section>
+        <section class="immunity-world-inside immunity-container">
+            <div class="immunity-world-inside__text_upper">
+                <p>
+                    Мы окружены множеством организмов, которые настольно малы,
+                    что мы их просто не можем увидеть. Часть из них живёт даже
+                    внутри нас – такие микроорганизмы принято называть
+                    микрофлорой. Мы настолько привыкли к друг другу и существуем
+                    в гармонии, что просто не замечаем этого.
+                </p>
+                <p>
+                    Однако, помимо дружественной микрофлоры, есть другие
+                    микроорганизмы, желающие воспользоваться нашими ресурсами.
+                    Живя у нас, такие «гости» (патогены, например, вирусы,
+                    бактерии) вызывают множество проблем, от насморка до
+                    температуры, лихорадки и боли, ну … и так далее.
+                </p>
+            </div>
+            <picture class="immunity-world-inside__image_right">
+                <source srcset="assets/family.png" media="(max-width: 600px)" />
+                <img
+                    src="assets/family_desktop.png"
+                    alt="shield image"
+                    width="293"
+                />
+            </picture>
+            <picture class="immunity-world-inside__image_left">
+                <source
+                    srcset="assets/family-left.png"
+                    media="(max-width: 600px)"
+                />
+                <img
+                    src="assets/family-left_desktop.png"
+                    alt="shield image"
+                    width="293"
+                />
+            </picture>
+            <div class="immunity-world-inside__text_lower">
+                <h2 class="immunity-world-inside_subtitle">
+                    Как работает иммунитет?
+                </h2>
+                <p>
+                    Вирус — очень маленький патоген, в разы меньше клетки,
+                    потому что клеткой он не является. Он как флешка с
+                    вредоносной информацией. Вирус не живой и без клетки ничего
+                    сделать не может.
+                </p>
+                <p>
+                    Цель вируса – преодолеть все защитные барьеры, проникнуть в
+                    клетку, наладить там конвейерную линию производства самого
+                    себя, используя индустриальные мощности клетки.
+                </p>
+            </div>
+        </section>
+        <section class="immunity-organism immunity-container">
+            <div class="immunity-organism__title clr-secondary">
+                <p>
+                    Организм человека обладает сложной системой защиты, которая
+                    активируется при контакте с вирусами и бактериями —
+                    иммунитетом.
+                </p>
+                <p class="fw-700">Иммунитет имеет 4 линии защиты</p>
+            </div>
+            <div class="immunity-organism-fugures">
+                <figure class="immunity-organism-figure">
+                    <img src="assets/shield.png" alt="shiled icon" />
+                    <figcaption>
+                        Барьерные <br />
+                        ткани
+                    </figcaption>
+                    <a
+                        class="immunity-organism-figure"
+                        href="#burr"
+                        target="_blank"
+                        >Подробнее</a
+                    >
+                </figure>
+                <figure class="immunity-organism-figure">
+                    <img src="assets/alert.png" alt="alert icon" />
+                    <figcaption>
+                        Сигнальная <br />
+                        система
+                    </figcaption>
+                    <a
+                        class="immunity-organism-figure"
+                        href="#burr"
+                        target="_blank"
+                        >Подробнее</a
+                    >
+                </figure>
+                <figure class="immunity-organism-figure">
+                    <img src="assets/cells.png" alt="cells icon" />
+                    <figcaption>
+                        Умные клетки <br />
+                        иммунитета
+                    </figcaption>
+                    <a
+                        class="immunity-organism-figure"
+                        href="#burr"
+                        target="_blank"
+                        >Подробнее</a
+                    >
+                </figure>
+                <figure class="immunity-organism-figure">
+                    <img src="assets/atom.png" alt="atom icon" />
+                    <figcaption>
+                        Синергия <br />
+                        защиты
+                    </figcaption>
+                    <a
+                        class="immunity-organism-figure"
+                        href="#burr"
+                        target="_blank"
+                        >Подробнее</a
+                    >
+                </figure>
+            </div>
+            <div class="immunity-organism__video">
+                <div class="immunity-video-wrapper">
+                    <img
+                        id="immunity-organism__video-cover"
+                        class="immunity-video-wrapper__cover"
+                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s4-video-bg.png"
+                        alt=""
+                    />
+                    <img
+                        id="immunity-organism__video-btn"
+                        class="immunity-video-wrapper_btn"
+                        src="assets/videobtn.png"
+                        alt=""
+                        onclick="immunityVideoPlay()"
+                    />
+                    <iframe
+                        id="immunity-organism__video_iframe"
+                        class="immunity-video-wrapper_hideiframe"
+                        width="750"
+                        height="422"
+                        src="https://www.youtube.com/embed/glG0oWEP1G0?si=frKRq8aqXg519W-G"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <p>Готовы узнать, как работает Ваш иммунитет?</p>
+            </div>
+        </section>
+        <section class="immunity-leafs">
+            <div class="immunity-leaf__products immunity-container">
+                <div class="immunity-leaf__product">
+                    <div class="img-wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pils1.png"
+                            alt="витамин С +"
+                        />
+                    </div>
+                </div>
+                <div class="immunity-leaf__product">
+                    <div class="img-wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pils2.png"
+                            alt="витамин D"
+                        />
+                    </div>
+                </div>
+                <div class="immunity-leaf__product">
+                    <div class="img-wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pils3.png"
+                            alt="Плюс"
+                        />
+                    </div>
+                </div>
+                <div class="immunity-leaf__product">
+                    <div class="img-wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pils4.png"
+                            alt="Цинт селен"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="immunity-leaf__products_desc immunity-container">
+                <div class="immunity-leaf__products_desc_text">
+                    <div class="immunity-leaf__products_desc_title">
+                        <img src="assets/sign.png" alt="sign icon" />
+                        <h3>Витамин С</h3>
+                    </div>
+                    <p>
+                        Витамин С способствует устойчивости клеток к
+                        неблагоприятным воздействиям
+                    </p>
+                    <button
+                        id="modal1"
+                        onclick="handleModalOpen(modal1)"
+                        class="immunity-btn"
+                    >
+                        Узнать больше
+                    </button>
+                </div>
+                <div class="immunity-leaf__products_desc_text">
+                    <div class="immunity-leaf__products_desc_title">
+                        <img src="assets/sign.png" alt="sign icon" />
+                        <h3>Витамин D</h3>
+                    </div>
+                    <p>Участвует в координации иммунного ответа</p>
+                    <button
+                        id="modal2"
+                        onclick="handleModalOpen(modal2)"
+                        class="immunity-btn"
+                    >
+                        Узнать больше
+                    </button>
+                </div>
+                <div class="immunity-leaf__products_desc_text">
+                    <div class="immunity-leaf__products_desc_title">
+                        <img src="assets/sign.png" alt="sign icon" />
+                        <h3>Эхинацея</h3>
+                    </div>
+                    <p>Поможет научить ваши умные иммунные клетки работать</p>
+                    <button
+                        id="modal3"
+                        onclick="handleModalOpen(modal3)"
+                        class="immunity-btn"
+                    >
+                        Узнать больше
+                    </button>
+                </div>
+                <div class="immunity-leaf__products_desc_text">
+                    <div class="immunity-leaf__products_desc_title">
+                        <img src="assets/sign.png" alt="sign icon" />
+                        <h3>Цинк + Cелен</h3>
+                    </div>
+                    <p>Для поддержания иммунитета,кожи и волос</p>
+                    <button
+                        id="modal4"
+                        onclick="handleModalOpen(modal4)"
+                        class="immunity-btn"
+                    >
+                        Узнать больше
+                    </button>
+                </div>
+            </div>
+            <div class="immunity-bg"></div>
+        </section>
+        <!-- Modals -->
+        <dialog id="immunity-modal1" class="immunity-modal">
+            <button class="immunity-modal__navbtn immunity-modal__navbtn-prev">
+                <svg
+                    class="svg svg-chevron-left"
+                    width="11"
+                    height="18"
+                    viewBox="0 0 11 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        class="svg-stroke"
+                        d="M10 1L2 9L10 17"
+                        stroke="#1A6349"
+                        stroke-width="2"
+                    ></path>
+                </svg>
+            </button>
+            <button class="immunity-modal__navbtn immunity-modal__navbtn-next">
+                <svg
+                    class="svg svg-chevron-right"
+                    width="11"
+                    height="18"
+                    viewBox="0 0 11 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        class="svg-stroke"
+                        d="M1 1L9 9L1 17"
+                        stroke="#1A6349"
+                        stroke-width="2"
+                    ></path>
+                </svg>
+            </button>
 
-<body>
-    <section class="immunity-header immunity-container">
-        <h1 class="immunity-header_title">Защита <br> иммунитета</h1>
-        <picture class="immunity-header__shield">
-            <source srcset="assets/shield.png" media="(max-width: 600px)" />
-            <img src='assets/shield_desktop.png' alt="shield image" height="120" width="120" />
-        </picture>
-        <picture class="immunity-header__flower">
-            <source srcset="assets/flower.png" media="(max-width: 600px)" />
-            <img src='assets/flower_desktop.png' alt="shield image" height="500" width="auto" />
-        </picture>
-        <h2 class="immunity-header__subtitle">Мир внутри нас</h2>
-    </section>
-    <section class='immunity-world-inside immunity-container'>
-        <div class="immunity-world-inside__text_upper">
-            <p>Мы окружены множеством организмов, которые настольно малы, что мы их
-                просто не можем увидеть. Часть из них живёт даже внутри нас – такие
-                микроорганизмы принято называть микрофлорой. Мы настолько привыкли
-                к друг другу и существуем в гармонии, что просто не замечаем этого.
-            </p>
-            <p>Однако, помимо дружественной микрофлоры, есть другие микроорганизмы,
-                желающие воспользоваться нашими ресурсами. Живя у нас, такие «гости»
-                (патогены, например, вирусы, бактерии) вызывают множество проблем, от
-                насморка до температуры, лихорадки и боли, ну … и так далее.
-            </p>
-        </div>
-        <picture class="immunity-world-inside__image_right">
-            <source srcset="assets/family.png" media="(max-width: 600px)" />
-            <img src='assets/family_desktop.png' alt="shield image" width="293" />
-        </picture>
-        <picture class="immunity-world-inside__image_left">
-            <source srcset="assets/family-left.png" media="(max-width: 600px)" />
-            <img src='assets/family-left_desktop.png' alt="shield image" width="293" />
-        </picture>
-        <div class="immunity-world-inside__text_lower">
-            <h2 class="immunity-world-inside_subtitle">Как работает иммунитет?</h2>
-            <p>
-                Вирус — очень маленький патоген, в разы меньше клетки, потому что
-                клеткой он не является. Он как флешка с вредоносной информацией. Вирус
-                не живой и без клетки ничего сделать не может.
-            </p>
-            <p>
-                Цель вируса – преодолеть все защитные барьеры, проникнуть в клетку,
-                наладить там конвейерную линию производства самого себя, используя
-                индустриальные мощности клетки.
-            </p>
-        </div>
-    </section>
-    <section class="immunity-organism immunity-container">
-        <div class="immunity-organism__title clr-secondary">
-            <p>
-                Организм человека обладает сложной системой защиты, которая
-                активируется при контакте с вирусами и бактериями —
-                иммунитетом.
-            </p>
-            <p class="fw-700">Иммунитет имеет 4 линии защиты</p>
-        </div>
-        <div class="immunity-organism-fugures">
-            <figure class="immunity-organism-figure">
-                <img src="assets/shield.png" alt="shiled icon">
-                <figcaption>Барьерные <br> ткани</figcaption>
-                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
-            </figure>
-            <figure class="immunity-organism-figure">
-                <img src="assets/alert.png" alt="alert icon">
-                <figcaption>Сигнальная <br> система</figcaption>
-                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
-            </figure>
-            <figure class="immunity-organism-figure">
-                <img src="assets/cells.png" alt="cells icon">
-                <figcaption>Умные клетки <br> иммунитета</figcaption>
-                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
-            </figure>
-            <figure class="immunity-organism-figure">
-                <img src="assets/atom.png" alt="atom icon">
-                <figcaption>Синергия <br> защиты</figcaption>
-                <a class="immunity-organism-figure" href="#burr" target="_blank">Подробнее</a>
-            </figure>
-        </div>
-        <div class="immunity-organism__video">
-            <div class="immunity-video-wrapper">
-                <img id="immunity-organism__video-cover" class="immunity-video-wrapper__cover"
-                    src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s4-video-bg.png" alt="">
-                <img id="immunity-organism__video-btn" class="immunity-video-wrapper_btn"  src="assets/videobtn.png" alt="" onclick="immunityVideoPlay()">
-                <iframe id="immunity-organism__video_iframe" class="immunity-video-wrapper_hideiframe" width="750" height="422"
-                    src="https://www.youtube.com/embed/glG0oWEP1G0?si=frKRq8aqXg519W-G"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            <p>Готовы узнать, как работает Ваш иммунитет?</p>
-        </div>
-    </section>
-    <section class="immunity-leafs">
-        <div class="immunity-leaf__products immunity-container">
-            <div class="immunity-leaf__product">
-                <div class="img-wrapper">
-                    <img class='immunity-leaf__product_img' src="assets/pils1.png" alt="витамин С +">
+            <div class="immunity-modal__bg">
+                <div class="immunity-modal__bg_content">
+                    <button
+                        id="immunity-modal__closebtn"
+                        class="immunity-modal__closebtn"
+                        onclick="closeModal('immunity-modal1')"
+                    >
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="svg svg-close"
+                        >
+                            <path
+                                d="M1 21L21 1"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                            <path
+                                d="M1 0.999999L21 21"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="immunity-modal__title">
+                        <img
+                            class="immunity-modal__title_img"
+                            src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1-title.png"
+                            alt=""
+                        />
+                        <p class="immunity-modal__title_text">
+                            Nutrilite™ Витамин С обеспечивает постоянную
+                            концентрацию витамина С в плазме крови, поддерживая
+                            непрерывную антиоксидантную и иммунную защиту вашего
+                            организма.
+                        </p>
+                        <a
+                            class="immunity-mt-top-auto"
+                            href="https://www.kz.amway.com/vitamin-s-plyus-60-tab-nutrilite/p/109741"
+                        >
+                            <button class="immunity-modal__btn">
+                                Смотреть в каталоге
+                            </button>
+                        </a>
+                    </div>
+                    <img
+                        class="immunity-modal__product_img"
+                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
+                        alt=""
+                    />
                 </div>
             </div>
-            <div class="immunity-leaf__product">
-                <div class="img-wrapper">
-                    <img class='immunity-leaf__product_img' src="assets/pils2.png" alt="витамин D">
+            <div class="immunity-modal__tips">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <g clip-path="url(#clip0)">
+                            <path
+                                d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                                fill="#1A6349"
+                            ></path>
+                            <path
+                                d="M35 12.4717C35 26.0113 30.325 32.8792 24 37C17.675 32.8792 13 26.0113 13 12.4717C17.125 11 20.7917 11 23.5417 11C26.2917 11 30.875 11 35 12.4717Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                class="svg-stroke"
+                            ></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect
+                                    width="48"
+                                    height="56"
+                                    fill="white"
+                                ></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p>
+                        Повышает устойчивость организма к неблагоприятным
+                        факторам внешней среды
+                    </p>
                 </div>
-            </div>
-            <div class="immunity-leaf__product">
-                <div class="img-wrapper">
-                    <img class='immunity-leaf__product_img' src="assets/pils3.png" alt="Плюс">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M36.9089 18.312C36.3312 14.6534 33.3466 11.6688 29.688 11.0911C26.9923 10.706 24.489 11.5725 22.6598 13.1129C20.9267 14.6534 19.0012 15.905 16.8831 16.8678C13.0319 18.7933 10.4324 23.0296 11.1064 27.8435C11.7803 32.4648 15.4389 36.2197 20.1565 36.8936C24.9704 37.5676 29.2067 34.9681 31.1322 31.1169C32.1913 29.0951 33.4429 27.0733 34.8871 25.3402C36.4275 23.511 37.294 21.0077 36.9089 18.312Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M21.6007 34.1016C24.791 34.1016 27.3773 31.5153 27.3773 28.3249C27.3773 25.1345 24.791 22.5482 21.6007 22.5482C18.4103 22.5482 15.824 25.1345 15.824 28.3249C15.824 31.5153 18.4103 34.1016 21.6007 34.1016Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.3774 19.6599C28.9725 19.6599 30.2657 18.3667 30.2657 16.7715C30.2657 15.1763 28.9725 13.8832 27.3774 13.8832C25.7822 13.8832 24.489 15.1763 24.489 16.7715C24.489 18.3667 25.7822 19.6599 27.3774 19.6599Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        В комбинации с витамином Е он усиливает функции
+                        фагоцитов – клеток, в буквальном смысле пожирающих
+                        вирусы и бактерии прямо в кровяном русле.
+                    </p>
                 </div>
-            </div>
-            <div class="immunity-leaf__product">
-                <div class="img-wrapper">
-                    <img class='immunity-leaf__product_img' src="assets/pils4.png" alt="Цинт селен">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M35.8999 23.6C38.3999 28 34.9999 31 30.1999 33.8C25.3999 36.6 20.9999 37.9 18.5999 33.5C17.1999 31.1 19.9999 26.9 24.7999 24.2C29.5999 21.5 34.5999 21.2 35.8999 23.6Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.7863 29.4143C31.1447 27.4994 33.4237 25.1693 32.8766 24.2098C32.3295 23.2502 29.1635 24.0246 25.8051 25.9395C22.4468 27.8543 20.1678 30.1844 20.7148 31.144C21.2619 32.1035 24.428 31.3291 27.7863 29.4143Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.1 17.7C26.1 21.3 22.4 21.9 18 20.7C13.6 19.5 10.2 16.9 11.2 13.3C11.7 11.3 15.7 10.7 20.1 11.9C24.5 13.1 27.6 15.7 27.1 17.7Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M24.0254 17.1032C24.2915 16.2606 22.2445 14.8628 19.4532 13.9811C16.6619 13.0995 14.1834 13.0679 13.9172 13.9105C13.6511 14.7532 15.6981 16.151 18.4894 17.0326C21.2807 17.9143 23.7592 17.9459 24.0254 17.1032Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        Поддерживает интенсивное производство антител, повышает
+                        сопротивляемость организма различным инфекциям,
+                        благодаря устойчивости самих клеток к проникновению
+                        болезнетворных агентов*
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="immunity-leaf__products_desc immunity-container">
-            <div class="immunity-leaf__products_desc_text">
-                <div class="immunity-leaf__products_desc_title">
-                    <img src="assets/sign.png" alt="sign icon">
-                    <h3>Витамин С</h3>
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M33.5 25.9C33.5 32.8 29.2 36.5 24 36.5C18.8 36.5 14.5 32.8 14.5 25.9C14.5 19 24 11.5 24 11.5C24 11.5 33.5 19 33.5 25.9Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27 22.8333C26.2841 21.75 25.1705 21 23.9773 21C21.75 21 20 23.25 20 26C20 28.75 21.75 31 23.9773 31C25.1705 31 26.2841 30.3333 27 29.1667"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linejoin="round"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        Nutrilite™ Витамин С обеспечивает постоянную
+                        концентрацию витамина С в плазме крови, поддерживая
+                        непрерывную антиоксидантную и иммунную защиту вашего
+                        организма.
+                    </p>
                 </div>
-                <p>
-                    Витамин С способствует
-                    устойчивости клеток к
-                    неблагоприятным
-                    воздействиям
+                <p class="immunity-modal__tips_notes">
+                    * Takeuchi A., Reddy G.S., Kobayashi T., et al. Nuclear
+                    factor of activated T cells (NFAT) as a molecular target for
+                    1alpha,25- dihydroxyvitamin D3-mediated effects // J
+                    Immunol. – 1998. –Vol. 160. – Р.209-218
                 </p>
-                <button class="immunity-btn">Узнать больше</button>
             </div>
-            <div class="immunity-leaf__products_desc_text">
-                <div class="immunity-leaf__products_desc_title">
-                    <img src="assets/sign.png" alt="sign icon">
-                    <h3>Витамин D</h3>
-                </div>
-                <p>
-                    Участвует в координации
-                    иммунного ответа
-                </p>
-                <button class="immunity-btn">Узнать больше</button>
-            </div>
-            <div class="immunity-leaf__products_desc_text">
-                <div class="immunity-leaf__products_desc_title">
-                    <img src="assets/sign.png" alt="sign icon">
-                    <h3>Эхинацея</h3>
-                </div>
-                <p>
-                    Поможет научить ваши умные
-                    иммунные клетки работать
-                </p>
-                <button class="immunity-btn">Узнать больше</button>
-            </div>
-            <div class="immunity-leaf__products_desc_text">
-                <div class="immunity-leaf__products_desc_title">
-                    <img src="assets/sign.png" alt="sign icon">
-                    <h3>Цинк + Cелен</h3>
-                </div>
-                <p>
-                    Для поддержания иммунитета,кожи и волос
-                </p>
-                <button class="immunity-btn">Узнать больше</button>
-            </div>
-        </div>
-        <div class="immunity-bg"></div>
-    </section>
-    <script>
-        function immunityVideoPlay() {
-            const cover = document.getElementById('immunity-organism__video-cover');
-            const btn = document.getElementById('immunity-organism__video-btn');
-            const iframe = document.getElementById('immunity-organism__video_iframe');
-            iframe.classList.remove('immunity-video-wrapper_hideiframe')
-            btn.classList.add('immunity-organism__video_hide')
-            iframe.src = `${iframe.src}&autoplay=1&mute=0&modestbranding=0`
-        }
-    </script>
-</body>
+        </dialog>
 
+        <dialog id="immunity-modal2" class="immunity-modal">
+            <div class="immunity-modal__bg">
+                <div class="immunity-modal__bg_content">
+                    <button
+                        id="immunity-modal__closebtn"
+                        class="immunity-modal__closebtn"
+                        onclick="closeModal('immunity-modal2')"
+                    >
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="svg svg-close"
+                        >
+                            <path
+                                d="M1 21L21 1"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                            <path
+                                d="M1 0.999999L21 21"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="immunity-modal__title">
+                        <img
+                            class="immunity-modal__title_img"
+                            src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m2-title.png"
+                            alt=""
+                        />
+                        <p class="immunity-modal__title_text">
+                            При участии витамина D вырабатываются информационные
+                            молекулы — цитокины. Они активируют (передают
+                            информацию) на клетки, непосредственно уничтожающие
+                            вирусы и бактерии в организме – макрофаги и защитные
+                            Т-клетки.
+                        </p>
+                        <a
+                            class="immunity-mt-top-auto"
+                            href="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m2.png"
+                        >
+                            <button class="immunity-modal__btn">
+                                Смотреть в каталоге
+                            </button>
+                        </a>
+                    </div>
+                    <img
+                        class="immunity-modal__product_img"
+                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="immunity-modal__tips">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M24 37C31.1797 37 37 31.1797 37 24C37 16.8203 31.1797 11 24 11C16.8203 11 11 16.8203 11 24C11 31.1797 16.8203 37 24 37Z"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M14.8 33.2001L33.2001 14.8"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        Повышает устойчивость организма к неблагоприятным
+                        факторам внешней среды
+                    </p>
+                </div>
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M36.9089 18.312C36.3312 14.6534 33.3466 11.6688 29.688 11.0911C26.9923 10.706 24.489 11.5725 22.6598 13.1129C20.9267 14.6534 19.0012 15.905 16.8831 16.8678C13.0319 18.7933 10.4324 23.0296 11.1064 27.8435C11.7803 32.4648 15.4389 36.2197 20.1565 36.8936C24.9704 37.5676 29.2067 34.9681 31.1322 31.1169C32.1913 29.0951 33.4429 27.0733 34.8871 25.3402C36.4275 23.511 37.294 21.0077 36.9089 18.312Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M21.6007 34.1016C24.791 34.1016 27.3773 31.5153 27.3773 28.3249C27.3773 25.1345 24.791 22.5482 21.6007 22.5482C18.4103 22.5482 15.824 25.1345 15.824 28.3249C15.824 31.5153 18.4103 34.1016 21.6007 34.1016Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.3774 19.6599C28.9725 19.6599 30.2657 18.3667 30.2657 16.7715C30.2657 15.1763 28.9725 13.8832 27.3774 13.8832C25.7822 13.8832 24.489 15.1763 24.489 16.7715C24.489 18.3667 25.7822 19.6599 27.3774 19.6599Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        В то же время он препятствует выработке избыточных
+                        противовоспалительных компонентов, способствуя
+                        предотвращению избыточной воспалительной реакции**
+                    </p>
+                </div>
+                <p class="immunity-modal__tips_notes">
+                    *Takeuchi A., Reddy G.S., Kobayashi T., et al. Nuclear
+                    factor of activated T cells (NFAT) as a molecular target for
+                    1alpha,25- dihydroxyvitamin D3-mediated effects // J
+                    Immunol. – 1998. –Vol. 160. – Р.209-218
+                </p>
+                <p class="immunity-modal__tips_notes">
+                    **Yong Zhang, Donald Y. M. Leung, Brittany N. Richers, Yusen
+                    Liu, Linda K. Remigio, David W. Riches, And Elena Goleva.
+                    Vitamin D Inhibits Monocyte/Macrophage Proinflammatory
+                    Cytokine Production by Targeting MAPK Phosphatase-1. The
+                    Journal of Immunology, March 1, 2012
+                </p>
+            </div>
+        </dialog>
+
+        <dialog id="immunity-modal3" class="immunity-modal">
+            <div class="immunity-modal__bg">
+                <div class="immunity-modal__bg_content">
+                    <button
+                        id="immunity-modal__closebtn"
+                        class="immunity-modal__closebtn"
+                        onclick="closeModal('immunity-modal3')"
+                    >
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="svg svg-close"
+                        >
+                            <path
+                                d="M1 21L21 1"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                            <path
+                                d="M1 0.999999L21 21"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="immunity-modal__title">
+                        <img
+                            class="immunity-modal__title_img"
+                            src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m3-title-xs.png"
+                            alt=""
+                        />
+                        <p class="immunity-modal__title_text">
+                            Эхинацея оказывает комплексное воздействие на
+                            иммунитет, включающее стимуляцию: фагоцитоза
+                            <sup>1 2</sup>
+                            , синтеза интерферонов, цитокинов (интерлейкинов)
+                            1,6,10
+                        </p>
+                        <a
+                            class="immunity-mt-top-auto"
+                            href="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m3.png"
+                        >
+                            <button class="immunity-modal__btn">
+                                Смотреть в каталоге
+                            </button>
+                        </a>
+                    </div>
+                    <img
+                        class="immunity-modal__product_img"
+                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="immunity-modal__tips">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M36.9089 18.312C36.3312 14.6534 33.3466 11.6688 29.688 11.0911C26.9923 10.706 24.489 11.5725 22.6598 13.1129C20.9267 14.6534 19.0012 15.905 16.8831 16.8678C13.0319 18.7933 10.4324 23.0296 11.1064 27.8435C11.7803 32.4648 15.4389 36.2197 20.1565 36.8936C24.9704 37.5676 29.2067 34.9681 31.1322 31.1169C32.1913 29.0951 33.4429 27.0733 34.8871 25.3402C36.4275 23.511 37.294 21.0077 36.9089 18.312Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M21.6007 34.1016C24.791 34.1016 27.3773 31.5153 27.3773 28.3249C27.3773 25.1345 24.791 22.5482 21.6007 22.5482C18.4103 22.5482 15.824 25.1345 15.824 28.3249C15.824 31.5153 18.4103 34.1016 21.6007 34.1016Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.3774 19.6599C28.9725 19.6599 30.2657 18.3667 30.2657 16.7715C30.2657 15.1763 28.9725 13.8832 27.3774 13.8832C25.7822 13.8832 24.489 15.1763 24.489 16.7715C24.489 18.3667 25.7822 19.6599 27.3774 19.6599Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        Повышает устойчивость организма к неблагоприятным
+                        факторам внешней среды
+                    </p>
+                </div>
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M36.9089 18.312C36.3312 14.6534 33.3466 11.6688 29.688 11.0911C26.9923 10.706 24.489 11.5725 22.6598 13.1129C20.9267 14.6534 19.0012 15.905 16.8831 16.8678C13.0319 18.7933 10.4324 23.0296 11.1064 27.8435C11.7803 32.4648 15.4389 36.2197 20.1565 36.8936C24.9704 37.5676 29.2067 34.9681 31.1322 31.1169C32.1913 29.0951 33.4429 27.0733 34.8871 25.3402C36.4275 23.511 37.294 21.0077 36.9089 18.312Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M21.6007 34.1016C24.791 34.1016 27.3773 31.5153 27.3773 28.3249C27.3773 25.1345 24.791 22.5482 21.6007 22.5482C18.4103 22.5482 15.824 25.1345 15.824 28.3249C15.824 31.5153 18.4103 34.1016 21.6007 34.1016Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.3774 19.6599C28.9725 19.6599 30.2657 18.3667 30.2657 16.7715C30.2657 15.1763 28.9725 13.8832 27.3774 13.8832C25.7822 13.8832 24.489 15.1763 24.489 16.7715C24.489 18.3667 25.7822 19.6599 27.3774 19.6599Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        В то же время он препятствует выработке избыточных
+                        противовоспалительных компонентов, способствуя
+                        предотвращению избыточной воспалительной реакции**
+                    </p>
+                </div>
+                <p class="immunity-modal__tips_notes">
+                    *Takeuchi A., Reddy G.S., Kobayashi T., et al. Nuclear
+                    factor of activated T cells (NFAT) as a molecular target for
+                    1alpha,25- dihydroxyvitamin D3-mediated effects // J
+                    Immunol. – 1998. –Vol. 160. – Р.209-218
+                </p>
+                <p class="immunity-modal__tips_notes">
+                    **Yong Zhang, Donald Y. M. Leung, Brittany N. Richers, Yusen
+                    Liu, Linda K. Remigio, David W. Riches, And Elena Goleva.
+                    Vitamin D Inhibits Monocyte/Macrophage Proinflammatory
+                    Cytokine Production by Targeting MAPK Phosphatase-1. The
+                    Journal of Immunology, March 1, 2012
+                </p>
+            </div>
+        </dialog>
+
+        <dialog id="immunity-modal4" class="immunity-modal">
+            <div class="immunity-modal__bg">
+                <div class="immunity-modal__bg_content">
+                    <button
+                        id="immunity-modal__closebtn"
+                        class="immunity-modal__closebtn"
+                        onclick="closeModal('immunity-modal4')"
+                    >
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 22 22"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="svg svg-close"
+                        >
+                            <path
+                                d="M1 21L21 1"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                            <path
+                                d="M1 0.999999L21 21"
+                                stroke="white"
+                                stroke-width="2"
+                                class="svg-stroke"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div class="immunity-modal__title">
+                        <img
+                            class="immunity-modal__title_img"
+                            src="https://www.kz.amway.com/common/medias/126811-s6-m4-title-ru.png?context=bWFzdGVyfHJvb3R8NDk3M3xpbWFnZS9wbmd8c3lzLW1hc3Rlci9yb290L2g4ZC9oODIvMTAzMzg1ODAwMDQ4OTQvMTI2ODExX3M2LW00LXRpdGxlX3J1LnBuZ3w3YzkzMmFhMmFiODk1YTc3ZTY4ODRlMWJlNmM0NjljNDI2MzliOWViNjg5MjYzYTZhMzhlZDc3MzA4Yzk2ZDg4&ccv=Qy1LQVotUw=="
+                            alt=""
+                        />
+                        <p class="immunity-modal__title_text">
+                            При участии витамина D вырабатываются информационные
+                            молекулы — цитокины. Они активируют (передают
+                            информацию) на клетки, непосредственно уничтожающие
+                            вирусы и бактерии в организме – макрофаги и защитные
+                            Т-клетки.
+                        </p>
+                        <a
+                            class="immunity-mt-top-auto"
+                            href="https://www.kz.amway.com/common/medias/126811-s6-4.png?context=bWFzdGVyfHJvb3R8Njk3NjV8aW1hZ2UvcG5nfHN5cy1tYXN0ZXIvcm9vdC9oYWMvaDk3LzEwMzM4NTgwNjYwMjU0LzEyNjgxMV9zNi00LnBuZ3xkYjY4NjA1M2VkZjM1OWE0N2RiZTQ4YjkwYWM3MWU2ODg1ZmIzMjcwOWNjZTI3MmFmOWZkNTEyNDY4NmJlYWU5&ccv=Qy1LQVotUw=="
+                        >
+                            <button class="immunity-modal__btn">
+                                Смотреть в каталоге
+                            </button>
+                        </a>
+                    </div>
+                    <img
+                        class="immunity-modal__product_img"
+                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="immunity-modal__tips">
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M24 37C31.1797 37 37 31.1797 37 24C37 16.8203 31.1797 11 24 11C16.8203 11 11 16.8203 11 24C11 31.1797 16.8203 37 24 37Z"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M14.8 33.2001L33.2001 14.8"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        Повышает устойчивость организма к неблагоприятным
+                        факторам внешней среды
+                    </p>
+                </div>
+                <div class="immunity-modal__tip">
+                    <svg
+                        width="48"
+                        height="56"
+                        viewBox="0 0 48 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="svg svg-m-icon"
+                    >
+                        <path
+                            d="M47.8957 5.29487C43.6894 3.52244 32.867 0 23.9943 0C15.1217 0 4.2992 3.52244 0.0929062 5.29487C-0.257619 13.1699 0.246261 26.3622 4.0144 34.5288C7.78255 42.6955 16.3923 50.5032 23.9943 56C31.5963 50.4808 40.1842 42.6731 43.9742 34.5288C47.7643 26.3846 48.2682 13.1699 47.8957 5.29487Z"
+                            fill="#1A6349"
+                        ></path>
+                        <path
+                            d="M36.9089 18.312C36.3312 14.6534 33.3466 11.6688 29.688 11.0911C26.9923 10.706 24.489 11.5725 22.6598 13.1129C20.9267 14.6534 19.0012 15.905 16.8831 16.8678C13.0319 18.7933 10.4324 23.0296 11.1064 27.8435C11.7803 32.4648 15.4389 36.2197 20.1565 36.8936C24.9704 37.5676 29.2067 34.9681 31.1322 31.1169C32.1913 29.0951 33.4429 27.0733 34.8871 25.3402C36.4275 23.511 37.294 21.0077 36.9089 18.312Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M21.6007 34.1016C24.791 34.1016 27.3773 31.5153 27.3773 28.3249C27.3773 25.1345 24.791 22.5482 21.6007 22.5482C18.4103 22.5482 15.824 25.1345 15.824 28.3249C15.824 31.5153 18.4103 34.1016 21.6007 34.1016Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                        <path
+                            d="M27.3774 19.6599C28.9725 19.6599 30.2657 18.3667 30.2657 16.7715C30.2657 15.1763 28.9725 13.8832 27.3774 13.8832C25.7822 13.8832 24.489 15.1763 24.489 16.7715C24.489 18.3667 25.7822 19.6599 27.3774 19.6599Z"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            class="svg-stroke"
+                        ></path>
+                    </svg>
+                    <p>
+                        В то же время он препятствует выработке избыточных
+                        противовоспалительных компонентов, способствуя
+                        предотвращению избыточной воспалительной реакции**
+                    </p>
+                </div>
+                <p class="immunity-modal__tips_notes">
+                    *Takeuchi A., Reddy G.S., Kobayashi T., et al. Nuclear
+                    factor of activated T cells (NFAT) as a molecular target for
+                    1alpha,25- dihydroxyvitamin D3-mediated effects // J
+                    Immunol. – 1998. –Vol. 160. – Р.209-218
+                </p>
+                <p class="immunity-modal__tips_notes">
+                    **Yong Zhang, Donald Y. M. Leung, Brittany N. Richers, Yusen
+                    Liu, Linda K. Remigio, David W. Riches, And Elena Goleva.
+                    Vitamin D Inhibits Monocyte/Macrophage Proinflammatory
+                    Cytokine Production by Targeting MAPK Phosphatase-1. The
+                    Journal of Immunology, March 1, 2012
+                </p>
+            </div>
+        </dialog>
+
+        <script>
+            const handleModalOpen = (type) => {
+                console.log(type.id)
+                const modal = document.getElementById(`immunity-${type.id}`)
+                modal.showModal()
+            }
+
+            const closeModal = (modelId) => {
+                const modal = document.getElementById(modelId)
+                modal.close()
+            }
+
+            const burr = document.body.getElementsByTagName('dialog')
+            console.log(burr)
+            function immunityVideoPlay() {
+                const cover = document.getElementById(
+                    'immunity-organism__video-cover'
+                )
+                const btn = document.getElementById(
+                    'immunity-organism__video-btn'
+                )
+                const iframe = document.getElementById(
+                    'immunity-organism__video_iframe'
+                )
+                iframe.classList.remove('immunity-video-wrapper_hideiframe')
+                btn.classList.add('immunity-organism__video_hide')
+                iframe.src = `${iframe.src}&autoplay=1&mute=0&modestbranding=0`
+            }
+            // const btn = document.getElementById('vatiminC')
+            // const modal1 = document.getElementById('immunity-modal-1')
+            // const modal2 = document.getElementById('immunity-modal-2')
+
+            // btn.addEventListener('click', () => {
+            //     modal1.showModal()
+            // })
+            // const closeModalBtn = document.getElementById(
+            //     'immunity-modal__closebtn'
+            // )
+            // closeModalBtn.addEventListener('click', () => favDialog.close())
+            // const handleModalClose = () => {
+            //     const favDialog = document.getElementById('favDialog')
+            //     e.preventDefault()
+            //     favDialog.close()
+            // }
+        </script>
+    </body>
 </html>

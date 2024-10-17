@@ -12,8 +12,10 @@
     --immunity-clr-primary: #006d47;
     --immunity-clr-secondary: #1a6349;
     --immunity-clr-black: #000000;
-    --immunity-clr-grey: #A8A8A8;
-    --immunity-clr-dark-grey: #2C2C2C;
+    --immunity-clr-grey: #a8a8a8;
+    --immunity-clr-dark-grey: #2c2c2c;
+    --immunity-clr-modal-bg: #6a9c39;
+    --immunity-clr-modal-btn: #84b830;
 }
 
 .immunity-container {
@@ -28,9 +30,7 @@
         'shield    flower'
         'title     flower'
         'subtitle  flower'
-        "subtitle      ."
-
-    ;
+        'subtitle      .';
     grid-template-rows: 1fr 1fr 1fr 1fr 1.3fr;
 
     row-gap: 1rem;
@@ -48,7 +48,6 @@
 
     color: var(--immunity-clr-primary);
     line-height: 0.8;
-
 }
 
 .immunity-header__subtitle {
@@ -58,7 +57,6 @@
     font-size: 53.86px;
     font-weight: 400;
     color: var(--immunity-clr-primary);
-
 }
 
 .immunity-header__subtitle::after {
@@ -66,7 +64,6 @@
     position: absolute;
     top: -270px;
     left: -40px;
-
 }
 
 .immunity-header__subtitle::before {
@@ -74,7 +71,6 @@
     position: absolute;
     top: 35px;
     left: 355px;
-
 }
 
 .immunity-header__shield {
@@ -96,8 +92,7 @@
         'text-upper image-right image-right'
         'image-left text-lower text-lower'
         'image-left text-lower text-lower'
-        'image-left text-lower text-lower'
-    ;
+        'image-left text-lower text-lower';
     grid-template-rows: repeat(6, 145px);
     /* grid-template-columns: 50% 1fr 1fr; */
 }
@@ -162,7 +157,6 @@
     line-height: 24px;
 }
 
-
 .immunity-world-inside__text_lower p {
     width: 70%;
     font-size: 17.859px;
@@ -176,8 +170,6 @@
 .immunity-world-inside__text_lower p:nth-of-type(2) {
     margin-top: 2rem;
 }
-
-
 
 .immunity-organism {
     margin-top: 3rem;
@@ -235,11 +227,7 @@
     display: none;
 }
 
-
-
-
 .immunity-video-wrapper_btn {
-
 }
 
 .immunity-video-wrapper_btn:hover {
@@ -253,7 +241,7 @@
     height: 422px;
 }
 
-.immunity-video-wrapper>* {
+.immunity-video-wrapper > * {
     grid-area: 1/1;
 }
 
@@ -261,7 +249,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-
 }
 
 .immunity-video-wrapper_hideiframe {
@@ -320,28 +307,28 @@
     position: relative;
 }
 
-.immunity-leaf__products>*:nth-child(1) .img-wrapper::after {
+.immunity-leaf__products > *:nth-child(1) .img-wrapper::after {
     content: url(assets/pils-icon-1.png);
     position: absolute;
     top: 65%;
     left: -20%;
 }
 
-.immunity-leaf__products>*:nth-child(2) .img-wrapper::after {
+.immunity-leaf__products > *:nth-child(2) .img-wrapper::after {
     content: url(assets/pils-icon-2.png);
     position: absolute;
     top: 10%;
     left: 40%;
 }
 
-.immunity-leaf__products>*:nth-child(3) .img-wrapper::after {
+.immunity-leaf__products > *:nth-child(3) .img-wrapper::after {
     content: url(assets/pils-icon-3.png);
     position: absolute;
     top: 30%;
     left: 20%;
 }
 
-.immunity-leaf__products>*:nth-child(4) .img-wrapper::after {
+.immunity-leaf__products > *:nth-child(4) .img-wrapper::after {
     content: url(assets/pils-icon-4.png);
     position: absolute;
     top: 15%;
@@ -368,7 +355,6 @@
     text-align: center;
     align-items: center;
 }
-
 
 .immunity-leaf__products_desc_text p {
     width: 65%;
@@ -397,13 +383,165 @@
     padding: 13px 47px;
     border: none;
     background-color: white;
-    border: 1px solid #C9C9C9;
+    border: 1px solid #c9c9c9;
     border-radius: 100px;
-    color: var
+}
+
+.immunity-btn:hover {
+    cursor: pointer;
+}
+
+dialog,
+::backdrop {
+    overscroll-behavior: contain;
+}
+
+body:has(.immunity-modal[open]) {
+    overflow: hidden;
+}
+
+.immunity-modal {
+    /* position: relative; */
+    border: none;
+    width: 750px;
+    align-self: center;
+    justify-self: center;
+}
+
+.immunity-modal__btn-prev {
+    display: inline-block;
+}
+
+.immunity-modal::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0.75;
+}
+
+.immunity-modal__bg {
+    position: relative;
+    background-origin: content-box;
+    background: url('https://ancs.amwaycontent.com/img/nutrilite-immunity/m-top-bg.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 68px 32px 0;
+}
+
+.immunity-modal__navbtn {
+    position: absolute;
+    background-color: white;
+    height: 56px;
+    width: 56px;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 50%;
+    z-index: 99999;
+    
+
+}
+
+.immunity-modal__navbtn-prev {
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+
+.immunity-modal__navbtn-next {
+    top:50%;
+    right: 80%;
+    transform: translateX(50%);
+    transform: translateY(-50%);
+}
+
+
+
+.immunity-modal__bg:after {
+    content: '';
+    position: absolute;
+    background-color: var(--immunity-clr-modal-bg);
+    z-index: -999;
+    inset: 0;
+    bottom: 20px;
+}
+
+.immunity-modal__bg_content {
+    position: relative;
+    display: grid;
+    grid-template-columns: min(380px, 100%) 1fr;
+}
+
+.immunity-modal__closebtn {
+    position: absolute;
+    top: -60px;
+    right: -25px;
+    background-color: transparent;
+    border: none;
+}
+
+.immunity-modal__closebtn:hover {
+    cursor: pointer;
+}
+
+.immunity-modal__title {
+    display: flex;
+    min-width: 380px;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.immunity-modal__title_img {
+    width: fit-content;
+}
+
+.immunity-modal__title_text {
+    line-height: 24px;
+    color: white;
+}
+
+.immunity-modal__product_img {
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.immunity-modal__btn {
+    margin-top: auto;
+    padding: 15px 35px;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    background-color: var(--immunity-clr-modal-btn);
+}
+
+.immunity-modal__btn:hover {
+    cursor: pointer;
+}
+
+.immunity-modal__tips {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.immunity-modal__tip {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    gap: 20px;
+}
+
+.immunity-modal__tips_notes {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--immunity-clr-grey);
 }
 
 .clr-secondary {
     color: var(--immunity-clr-secondary);
+}
+
+.immunity-mt-top-auto {
+    margin-top: auto;
 }
 
 .fw-400 {
