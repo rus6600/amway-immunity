@@ -401,12 +401,18 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal {
-    /* position: relative; */
-    border: none;
-    width: 750px;
+    width: 850px;
     align-self: center;
     justify-self: center;
+    background-color: transparent;
+    border: none;
+    /* overflow-y: hidden; */
 }
+
+.immunity-modal::-webkit-scrollbar {
+    display: none;
+  }
+
 
 .immunity-modal__btn-prev {
     display: inline-block;
@@ -419,49 +425,50 @@ body:has(.immunity-modal[open]) {
 
 .immunity-modal__bg {
     position: relative;
-    background-origin: content-box;
+    padding: 68px 32px 12px 32px;
     background: url('https://ancs.amwaycontent.com/img/nutrilite-immunity/m-top-bg.png');
     background-repeat: no-repeat;
     background-position: top right;
-    padding: 68px 32px 0;
+    overflow-x: hidden;
 }
 
 .immunity-modal__navbtn {
-    position: absolute;
+    display: grid;
+    place-items: center;
     background-color: white;
     height: 56px;
     width: 56px;
     aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
-    z-index: 99999;
-    
-
+    align-self: center;
 }
 
 .immunity-modal__navbtn-prev {
-    top:50%;
-    transform: translateY(-50%);
+    align-self: ce;
 }
 
+.immunity-modal__navbtn:hover {
+    cursor: pointer;
+}
 
+.immunity-modal__content__inner {
+    background-color: var(--immunity-clr-modal-bg);
+}
+
+.immunity-modal__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 1rem;
+    align-items: center;
+}
 
 .immunity-modal__navbtn-next {
-    top:50%;
+    top: 50%;
     right: 80%;
     transform: translateX(50%);
     transform: translateY(-50%);
-}
-
-
-
-.immunity-modal__bg:after {
-    content: '';
-    position: absolute;
-    background-color: var(--immunity-clr-modal-bg);
-    z-index: -999;
-    inset: 0;
-    bottom: 20px;
 }
 
 .immunity-modal__bg_content {
@@ -483,10 +490,21 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal__title {
+    position: relative;
     display: flex;
     min-width: 380px;
     flex-direction: column;
     gap: 24px;
+}
+
+.immunity-modal__title::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: -32px;
+    height: 32px;
+    width: 850px;
+    background-color: white;
 }
 
 .immunity-modal__title_img {
@@ -494,20 +512,30 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal__title_text {
+    width: 80%;
     line-height: 24px;
     color: white;
+    font-family:
+        Myriad Pro,
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 .immunity-modal__product_img {
     justify-self: center;
     align-self: flex-end;
+    z-index: 999;
 }
 
 .immunity-modal__btn {
+    position: relative;
     margin-top: auto;
     padding: 15px 35px;
     border-radius: 100px;
+    font-size: 18px;
     border: none;
+    z-index: 99;
     color: white;
     background-color: var(--immunity-clr-modal-btn);
 }
@@ -517,17 +545,30 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal__tips {
+    position: relative;
     display: flex;
     padding: 32px;
     flex-direction: column;
     gap: 26px;
+    background-color: white;
 }
 
 .immunity-modal__tip {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: min-content 1fr;
     gap: 20px;
+}
+.immunity-modal__tip {
+    line-height: 30px;
+}
+
+.immunity-modal__tip span {
+    color: var(--immunity-clr-secondary);
+}
+
+.immunity-modal__tip svg {
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .immunity-modal__tips_notes {
@@ -554,4 +595,52 @@ body:has(.immunity-modal[open]) {
 
 .fw-700 {
     font-weight: 700;
+}
+
+dialog {
+    animation: fade-out 0.4s ease-out;
+}
+
+dialog[open] {
+    animation: fade-in 0.4s ease-out;
+}
+
+dialog[open]::backdrop {
+    animation: backdrop-fade-in 0.4s ease-out forwards;
+}
+
+/* Animation keyframes */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes backdrop-fade-in {
+    0% {
+        background-color: rgb(0 0 0 / 0%);
+    }
+
+    100% {
+        background-color: rgb(0 0 0 / 70%);
+    }
 }
