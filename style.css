@@ -227,9 +227,6 @@
     display: none;
 }
 
-.immunity-video-wrapper_btn {
-}
-
 .immunity-video-wrapper_btn:hover {
     cursor: pointer;
 }
@@ -406,13 +403,11 @@ body:has(.immunity-modal[open]) {
     justify-self: center;
     background-color: transparent;
     border: none;
-    /* overflow-y: hidden; */
 }
 
 .immunity-modal::-webkit-scrollbar {
     display: none;
-  }
-
+}
 
 .immunity-modal__btn-prev {
     display: inline-block;
@@ -441,7 +436,6 @@ body:has(.immunity-modal[open]) {
     aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
-    align-self: center;
 }
 
 .immunity-modal__navbtn-prev {
@@ -458,17 +452,9 @@ body:has(.immunity-modal[open]) {
 
 .immunity-modal__content {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, min-content);
+    display: flex;
     gap: 1rem;
     align-items: center;
-}
-
-.immunity-modal__navbtn-next {
-    top: 50%;
-    right: 80%;
-    transform: translateX(50%);
-    transform: translateY(-50%);
 }
 
 .immunity-modal__bg_content {
