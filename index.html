@@ -1493,22 +1493,29 @@
                 const { width } = targetNode.getBoundingClientRect()
                 const scrollLeft = targetNode.scrollLeft
                 const newIndex = scrollLeft / width
-                console.log(newIndex)
-                dots.forEach((node, id) => {
-                    const classList = [...node.classList]
-                    if (
-                        classList.includes('immunity-leafs__dot_active') &&
-                        id !== newIndex
-                    ) {
-                        node.classList.remove('immunity-leafs__dot_active')
-                        return
-                    }
-                    if (id === newIndex) {
-                        node.classList.add('immunity-leafs__dot_active')
-                    }
-                })
+                if (
+                    newIndex === 0 ||
+                    newIndex === 1 ||
+                    newIndex === 2 ||
+                    newIndex === 3
+                ) {
+                    console.log(newIndex)
+                    dots.forEach((node, id) => {
+                        const classList = [...node.classList]
+                        if (
+                            classList.includes('immunity-leafs__dot_active') &&
+                            id !== newIndex
+                        ) {
+                            node.classList.remove('immunity-leafs__dot_active')
+                            return
+                        }
+                        if (id === newIndex) {
+                            node.classList.add('immunity-leafs__dot_active')
+                        }
+                    })
+                }
             }
-            targetNode.addEventListener('scrollend', handleScroll)
+            targetNode.addEventListener('scroll', handleScroll)
         </script>
     </body>
 </html>
