@@ -33,7 +33,6 @@
                 <img
                     src="assets/flower_desktop.png"
                     alt="shield image"
-                    height="500"
                     width="auto"
                 />
             </picture>
@@ -175,8 +174,6 @@
                     <iframe
                         id="immunity-organism__video_iframe"
                         class="immunity-video-wrapper_hideiframe"
-                        width="750"
-                        height="422"
                         src="https://www.youtube.com/embed/glG0oWEP1G0?si=frKRq8aqXg519W-G"
                         title="YouTube video player"
                         frameborder="0"
@@ -188,107 +185,108 @@
                 <p>Готовы узнать, как работает Ваш иммунитет?</p>
             </div>
         </section>
-        <section class="immunity-leafs">
-            <div class="immunity-leaf__products immunity-container">
-                <div class="immunity-leaf__product">
-                    <div class="img-wrapper">
-                        <img
-                            class="immunity-leaf__product_img"
-                            src="assets/pills1.png"
-                            alt="витамин С +"
-                        />
-                    </div>
-                </div>
-                <div class="immunity-leaf__product">
-                    <div class="img-wrapper">
-                        <img
-                            class="immunity-leaf__product_img"
-                            src="assets/pills2.png"
-                            alt="витамин D"
-                        />
-                    </div>
-                </div>
-                <div class="immunity-leaf__product">
-                    <div class="img-wrapper">
-                        <img
-                            class="immunity-leaf__product_img"
-                            src="assets/pills3.png"
-                            alt="Плюс"
-                        />
-                    </div>
-                </div>
-                <div class="immunity-leaf__product">
-                    <div class="img-wrapper">
-                        <img
-                            class="immunity-leaf__product_img"
-                            src="assets/pills4.png"
-                            alt="Цинт селен"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="immunity-leaf__products_desc immunity-container">
-                <div class="immunity-leaf__products_desc_text">
-                    <div class="immunity-leaf__products_desc_title">
+        <section id="immunity-leafs" class="immunity-leafs">
+            <div class="immunity-leafs__products">
+                <div id="leaf__product-1" class="immunity-leafs__product">
+                    <img
+                        class="immunity-leaf__product_img"
+                        src="assets/pills1.png"
+                        alt="витамин С +"
+                    />
+                    <div class="immunity-leafs__product__desc">
                         <img src="assets/sign.png" alt="sign icon" />
                         <h3>Витамин С</h3>
+                        <p>
+                            Витамин С способствует устойчивости клеток к
+                            неблагоприятным воздействиям
+                        </p>
+                        <button
+                            id="modal1"
+                            onclick="handleModalOpen(modal1)"
+                            class="immunity-btn"
+                        >
+                            Узнать больше
+                        </button>
                     </div>
-                    <p>
-                        Витамин С способствует устойчивости клеток к
-                        неблагоприятным воздействиям
-                    </p>
-                    <button
-                        id="modal1"
-                        onclick="handleModalOpen(modal1)"
-                        class="immunity-btn"
-                    >
-                        Узнать больше
-                    </button>
                 </div>
-                <div class="immunity-leaf__products_desc_text">
-                    <div class="immunity-leaf__products_desc_title">
+                <div id="leaf__product-2" class="immunity-leafs__product">
+                    <img
+                        class="immunity-leaf__product_img"
+                        src="assets/pills2.png"
+                        alt="витамин D"
+                    />
+                    <div class="immunity-leafs__product__desc">
                         <img src="assets/sign.png" alt="sign icon" />
                         <h3>Витамин D</h3>
+                        <p>Участвует в координации иммунного ответа</p>
+                        <button
+                            id="modal2"
+                            onclick="handleModalOpen(modal2)"
+                            class="immunity-btn"
+                        >
+                            Узнать больше
+                        </button>
                     </div>
-                    <p>Участвует в координации иммунного ответа</p>
-                    <button
-                        id="modal2"
-                        onclick="handleModalOpen(modal2)"
-                        class="immunity-btn"
-                    >
-                        Узнать больше
-                    </button>
                 </div>
-                <div class="immunity-leaf__products_desc_text">
-                    <div class="immunity-leaf__products_desc_title">
+                <div id="leaf__product-3" class="immunity-leafs__product">
+                    <img
+                        class="immunity-leaf__product_img"
+                        src="assets/pills3.png"
+                        alt="Плюс"
+                    />
+                    <div class="immunity-leafs__product__desc">
                         <img src="assets/sign.png" alt="sign icon" />
                         <h3>Эхинацея</h3>
+                        <p>
+                            Поможет научить ваши умные иммунные клетки работать
+                        </p>
+                        <button
+                            id="modal3"
+                            onclick="handleModalOpen(modal3)"
+                            class="immunity-btn"
+                        >
+                            Узнать больше
+                        </button>
                     </div>
-                    <p>Поможет научить ваши умные иммунные клетки работать</p>
-                    <button
-                        id="modal3"
-                        onclick="handleModalOpen(modal3)"
-                        class="immunity-btn"
-                    >
-                        Узнать больше
-                    </button>
                 </div>
-                <div class="immunity-leaf__products_desc_text">
-                    <div class="immunity-leaf__products_desc_title">
+                <div id="leaf__product-4" class="immunity-leafs__product">
+                    <img
+                        class="immunity-leaf__product_img"
+                        src="assets/pills4.png"
+                        alt="Цинт селен"
+                    />
+                    <div class="immunity-leafs__product__desc">
                         <img src="assets/sign.png" alt="sign icon" />
                         <h3>Цинк + Cелен</h3>
+                        <p>Для поддержания иммунитета,кожи и волос</p>
+                        <button
+                            id="modal4"
+                            onclick="handleModalOpen(modal4)"
+                            class="immunity-btn"
+                        >
+                            Узнать больше
+                        </button>
                     </div>
-                    <p>Для поддержания иммунитета,кожи и волос</p>
-                    <button
-                        id="modal4"
-                        onclick="handleModalOpen(modal4)"
-                        class="immunity-btn"
-                    >
-                        Узнать больше
-                    </button>
                 </div>
             </div>
-            <div class="immunity-bg"></div>
+            <div class="immunity-leafs__dots">
+                <div
+                    id="immunity-leafs__dot-1"
+                    class="immunity-leafs__dot immunity-leafs__dot_active"
+                ></div>
+                <div
+                    id="immunity-leafs__dot-2"
+                    class="immunity-leafs__dot"
+                ></div>
+                <div
+                    id="immunity-leafs__dot-3"
+                    class="immunity-leafs__dot"
+                ></div>
+                <div
+                    id="immunity-leafs__dot-4"
+                    class="immunity-leafs__dot"
+                ></div>
+            </div>
         </section>
         <!-- Modals -->
         <dialog id="immunity-modal1" class="immunity-modal">
@@ -1413,7 +1411,7 @@
                 </div>
             </div>
         </section>
-        <div class="immunity__caution immunity-container">
+        <section class="immunity__caution immunity-container">
             <img src="assets/caution.png" alt="caution text" />
             <p>
                 <span
@@ -1433,7 +1431,7 @@
                 каталоге (в связи с изменениями законодательных требований, а
                 также незначительным изменением формулы продукта).
             </p>
-        </div>
+        </section>
 
         <script>
             const handleModalOpenBtn = (type) => {
@@ -1487,6 +1485,48 @@
                     currentModal.close()
                 }
             }
+            const elementIsVisibleInViewport = (
+                el,
+                partiallyVisible = false
+            ) => {
+                const { top, left, bottom, right } = el.getBoundingClientRect()
+                const { innerHeight, innerWidth } = window
+                return partiallyVisible
+                    ? ((top > 0 && top < innerHeight) ||
+                          (bottom > 0 && bottom < innerHeight)) &&
+                          ((left > 0 && left < innerWidth) ||
+                              (right > 0 && right < innerWidth))
+                    : top >= 0 &&
+                          left >= 0 &&
+                          bottom <= innerHeight &&
+                          right <= innerWidth
+            }
+            const debounce = (cb) => {
+                let timer = null
+                return (args) => {
+                    clearTimeout(timer)
+                    timer = setTimeout(() => {
+                        cb(args)
+                    }, 1000)
+                }
+            }
+            const el1 = document.getElementById('leaf__product-1')
+            const handleSwap = debounce((args) => {
+                const { left, width } = el1.getBoundingClientRect()
+                const currSlideNumber = Math.ceil(Math.abs(left) / width) + 1
+                let currActive = document.querySelector(
+                    '.immunity-leafs__dot_active'
+                )
+                currActive.classList.remove('immunity-leafs__dot_active')
+                currActive = document.getElementById(
+                    `immunity-leafs__dot-${currSlideNumber}`
+                )
+                currActive.classList.add('immunity-leafs__dot_active')
+                console.log(currSlideNumber)
+            })
+
+            const container = document.getElementById('immunity-leafs')
+            container.addEventListener('touchend', handleSwap)
         </script>
     </body>
 </html>
