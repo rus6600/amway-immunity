@@ -185,8 +185,8 @@
                 <p>Готовы узнать, как работает Ваш иммунитет?</p>
             </div>
         </section>
-        <section id="immunity-leafs" class="immunity-leafs">
-            <div class="immunity-leafs__products">
+        <section class="immunity-leafs">
+            <div id="immunity-leafs" class="immunity-leafs__products">
                 <div id="leaf__product-1" class="immunity-leafs__product">
                     <img
                         class="immunity-leaf__product_img"
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="immunity-leafs__dots">
+            <div id="immunity-leafs__dots" class="immunity-leafs__dots">
                 <div
                     id="immunity-leafs__dot-1"
                     class="immunity-leafs__dot immunity-leafs__dot_active"
@@ -1485,48 +1485,31 @@
                     currentModal.close()
                 }
             }
-            const elementIsVisibleInViewport = (
-                el,
-                partiallyVisible = false
-            ) => {
-                const { top, left, bottom, right } = el.getBoundingClientRect()
-                const { innerHeight, innerWidth } = window
-                return partiallyVisible
-                    ? ((top > 0 && top < innerHeight) ||
-                          (bottom > 0 && bottom < innerHeight)) &&
-                          ((left > 0 && left < innerWidth) ||
-                              (right > 0 && right < innerWidth))
-                    : top >= 0 &&
-                          left >= 0 &&
-                          bottom <= innerHeight &&
-                          right <= innerWidth
-            }
-            const debounce = (cb) => {
-                let timer = null
-                return (args) => {
-                    clearTimeout(timer)
-                    timer = setTimeout(() => {
-                        cb(args)
-                    }, 1000)
-                }
-            }
-            const el1 = document.getElementById('leaf__product-1')
-            const handleSwap = debounce((args) => {
-                const { left, width } = el1.getBoundingClientRect()
-                const currSlideNumber = Math.ceil(Math.abs(left) / width) + 1
-                let currActive = document.querySelector(
-                    '.immunity-leafs__dot_active'
-                )
-                currActive.classList.remove('immunity-leafs__dot_active')
-                currActive = document.getElementById(
-                    `immunity-leafs__dot-${currSlideNumber}`
-                )
-                currActive.classList.add('immunity-leafs__dot_active')
-                console.log(currSlideNumber)
-            })
+            const dots = [...document.getElementById('immunity-leafs__dots').children]
+            const targetNode = document.getElementById('immunity-leafs')
+            const handleScroll = (e) => {
+                const { width } = targetNode.getBoundingClientRect()
+                const scrollLeft = targetNode.scrollLeft
+                const newIndex = scrollLeft/width;
 
-            const container = document.getElementById('immunity-leafs')
-            container.addEventListener('touchend', handleSwap)
+                dots.forEach((node, id) => {
+                    const classList = [...node.classList]
+                    if (classList.includes('immunity-leafs__dot_active') && id !== newIndex) {
+                        node.classList.remove('immunity-leafs__dot_active')
+                        return
+                    } 
+                    if (id === newIndex) {
+                        node.classList.add('immunity-leafs__dot_active')
+                    }
+                })
+
+                // console.log(dots)
+                // prev.classList.remove('immunity-leafs__dot_active')
+                // const next = document.getElementById(`immunity-leafs__dot-${newIndex}`)
+                // next.classList.add('immunity-leafs__dot_active')
+                
+            }
+            targetNode.addEventListener('scrollend', handleScroll)
         </script>
     </body>
 </html>
