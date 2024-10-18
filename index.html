@@ -93,13 +93,13 @@
             </div>
         </section>
         <section class="immunity-organism immunity-container">
-            <div class="immunity-organism__title clr-secondary">
+            <div class="immunity-organism__title immunity-clr-secondary">
                 <p>
                     Организм человека обладает сложной системой защиты, которая
                     активируется при контакте с вирусами и бактериями —
                     иммунитетом.
                 </p>
-                <p class="fw-700">Иммунитет имеет 4 линии защиты</p>
+                <p class="immunity-fw-700">Иммунитет имеет 4 линии защиты</p>
             </div>
             <div class="immunity-organism-fugures">
                 <figure class="immunity-organism-figure">
@@ -108,12 +108,12 @@
                         Барьерные <br />
                         ткани
                     </figcaption>
-                    <a
+                    <button
+                        onclick="handleModalOpenBtn('modal1')"
                         class="immunity-organism-figure"
-                        href="#burr"
-                        target="_blank"
-                        >Подробнее</a
                     >
+                        Подробнее
+                    </button>
                 </figure>
                 <figure class="immunity-organism-figure">
                     <img src="assets/alert.png" alt="alert icon" />
@@ -121,12 +121,12 @@
                         Сигнальная <br />
                         система
                     </figcaption>
-                    <a
+                    <button
+                        onclick="handleModalOpenBtn('modal2')"
                         class="immunity-organism-figure"
-                        href="#burr"
-                        target="_blank"
-                        >Подробнее</a
                     >
+                        Подробнее
+                    </button>
                 </figure>
                 <figure class="immunity-organism-figure">
                     <img src="assets/cells.png" alt="cells icon" />
@@ -134,25 +134,27 @@
                         Умные клетки <br />
                         иммунитета
                     </figcaption>
-                    <a
+                    <button
+                        onclick="handleModalOpenBtn('modal3')"
                         class="immunity-organism-figure"
-                        href="#burr"
-                        target="_blank"
-                        >Подробнее</a
                     >
+                        Подробнее
+                    </button>
                 </figure>
-                <figure class="immunity-organism-figure">
+                <figure
+                    class="immunity-organism-figure immunity-organism-figure-anchor"
+                >
                     <img src="assets/atom.png" alt="atom icon" />
                     <figcaption>
                         Синергия <br />
                         защиты
                     </figcaption>
-                    <a
+                    <button
+                        onclick="handleModalOpenBtn('modal4')"
                         class="immunity-organism-figure"
-                        href="#burr"
-                        target="_blank"
-                        >Подробнее</a
                     >
+                        Подробнее
+                    </button>
                 </figure>
             </div>
             <div class="immunity-organism__video">
@@ -160,8 +162,8 @@
                     <img
                         id="immunity-organism__video-cover"
                         class="immunity-video-wrapper__cover"
-                        src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s4-video-bg.png"
-                        alt=""
+                        src="assets/video-capture.png"
+                        alt="video video-capture"
                     />
                     <img
                         id="immunity-organism__video-btn"
@@ -192,7 +194,7 @@
                     <div class="img-wrapper">
                         <img
                             class="immunity-leaf__product_img"
-                            src="assets/pils1.png"
+                            src="assets/pills1.png"
                             alt="витамин С +"
                         />
                     </div>
@@ -201,7 +203,7 @@
                     <div class="img-wrapper">
                         <img
                             class="immunity-leaf__product_img"
-                            src="assets/pils2.png"
+                            src="assets/pills2.png"
                             alt="витамин D"
                         />
                     </div>
@@ -210,7 +212,7 @@
                     <div class="img-wrapper">
                         <img
                             class="immunity-leaf__product_img"
-                            src="assets/pils3.png"
+                            src="assets/pills3.png"
                             alt="Плюс"
                         />
                     </div>
@@ -219,7 +221,7 @@
                     <div class="img-wrapper">
                         <img
                             class="immunity-leaf__product_img"
-                            src="assets/pils4.png"
+                            src="assets/pills4.png"
                             alt="Цинт селен"
                         />
                     </div>
@@ -344,8 +346,8 @@
                             <div class="immunity-modal__title">
                                 <img
                                     class="immunity-modal__title_img"
-                                    src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1-title.png"
-                                    alt=""
+                                    src="assets/modaltitle1.png"
+                                    alt="vitamin C"
                                 />
                                 <p class="immunity-modal__title_text">
                                     Nutrilite™ Витамин С обеспечивает
@@ -365,8 +367,8 @@
                             </div>
                             <img
                                 class="immunity-modal__product_img"
-                                src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
-                                alt=""
+                                src="assets/pills1.png"
+                                alt="Витамин C Плюс"
                             />
                         </div>
                     </div>
@@ -627,8 +629,8 @@
                             <div class="immunity-modal__title">
                                 <img
                                     class="immunity-modal__title_img"
-                                    src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m2-title.png"
-                                    alt=""
+                                    src="assets/modaltitle2.png"
+                                    alt="Vitamin D"
                                 />
                                 <p class="immunity-modal__title_text">
                                     Если в организме недостаточно витамина Д,
@@ -648,8 +650,8 @@
                             </div>
                             <img
                                 class="immunity-modal__product_img"
-                                src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
-                                alt=""
+                                src="assets/pills2.png"
+                                alt="Витамин Д Плюс"
                             />
                         </div>
                     </div>
@@ -867,7 +869,7 @@
                             <div class="immunity-modal__title">
                                 <img
                                     class="immunity-modal__title_img"
-                                    src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m3-title.png"
+                                    src="assets/modaltitle3.png"
                                     alt=""
                                 />
                                 <p class="immunity-modal__title_text">
@@ -888,8 +890,8 @@
                             </div>
                             <img
                                 class="immunity-modal__product_img"
-                                src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
-                                alt=""
+                                src="assets/pills3.png"
+                                alt="Эхинацея +"
                             />
                         </div>
                     </div>
@@ -1129,7 +1131,7 @@
                             <div class="immunity-modal__title">
                                 <img
                                     class="immunity-modal__title_img"
-                                    src="https://www.kz.amway.com/common/medias/126811-s6-m4-title-ru.png?context=bWFzdGVyfHJvb3R8NDk3M3xpbWFnZS9wbmd8c3lzLW1hc3Rlci9yb290L2g4ZC9oODIvMTAzMzg1ODAwMDQ4OTQvMTI2ODExX3M2LW00LXRpdGxlX3J1LnBuZ3w3YzkzMmFhMmFiODk1YTc3ZTY4ODRlMWJlNmM0NjljNDI2MzliOWViNjg5MjYzYTZhMzhlZDc3MzA4Yzk2ZDg4&ccv=Qy1LQVotUw=="
+                                    src="assets/modaltitle4.png"
                                     alt=""
                                 />
                                 <p class="immunity-modal__title_text">
@@ -1156,8 +1158,8 @@
                             </div>
                             <img
                                 class="immunity-modal__product_img"
-                                src="https://ancs.amwaycontent.com/img/nutrilite-immunity/s6-m1.png"
-                                alt=""
+                                src="assets/pills4.png"
+                                alt="Цинк + селен"
                             />
                         </div>
                     </div>
@@ -1300,9 +1302,147 @@
             </div>
         </dialog>
 
+        <section class="immunity-test immunity-container">
+            <div class="immunity-test__wrapper">
+                <div class="immunity-test__desc">
+                    <div class="immunity-test__title">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="64"
+                            height="64"
+                            viewBox="0 0 64 64"
+                            fill="none"
+                        >
+                            <g clip-path="url(#clip0_9_58)">
+                                <path
+                                    d="M38.2542 13.4839H25.7267V20.817H38.2542V13.4839Z"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M41.3287 35.9034L43.6203 38.195L49.674 32.1414"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M21.3154 26.355H35.5615"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M21.3154 32.1414H33.1935"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M21.3154 37.9275H33.1935"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M21.3154 43.7139H35.5615"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M62.5261 32.1794C62.5261 49.0418 48.8528 62.715 31.9905 62.715C15.1281 62.715 1.47394 49.0227 1.47394 32.1794C1.47394 15.3361 15.1281 1.6438 31.9905 1.6438C48.8528 1.6438 62.5261 15.317 62.5261 32.1794Z"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M16.7513 51.0087V21.2943C16.7513 19.0218 18.6037 17.1885 20.8762 17.1885H25.7458"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M38.4642 17.1694H43.3339C45.6064 17.1694 47.4397 19.0027 47.4397 21.2752V26.5459"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M53.9898 34.643C53.9898 39.188 50.3042 42.8546 45.7783 42.8546C41.2523 42.8546 37.5667 39.1689 37.5667 34.643C37.5667 30.1171 41.2523 26.4314 45.7783 26.4314C47.4779 26.4314 49.0629 26.947 50.3806 27.8255C52.5767 29.2959 54.0089 31.7976 54.0089 34.643H53.9898Z"
+                                    stroke="#006D47"
+                                    stroke-width="2.01"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_9_58">
+                                    <rect
+                                        width="63"
+                                        height="63"
+                                        fill="white"
+                                        transform="translate(0.5 0.669922)"
+                                    />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <h3>Тест</h3>
+                    </div>
+                    <p>Проверьте свой иммунитет с Nutrilite™</p>
+                    <a
+                        href="https://www.kz.amway.com/our-brands/nutrilite/immunity-test"
+                        target="_blank"
+                    >
+                        <button class="immunity-test__desc_btn">
+                            Пройти тест
+                        </button>
+                    </a>
+                </div>
+                <div class="immunity-test__img">
+                    <img src="assets/womanandchildren.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <div class="immunity__caution immunity-container">
+            <img src="assets/caution.png" alt="caution text" />
+            <p>
+                <span
+                    >ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. ПЕРЕД ПРИМЕНЕНИЕМ
+                    ПРОКОНСУЛЬТИРУЙТЕСЬ СО СПЕЦИАЛИСТОМ. БАДы NUTRILITE™ </span
+                >предназначены только для личного использования. Любые иные
+                способы использования и реализации БАД допускаются исключительно
+                в случаях и при соблюдении требований, предусмотренных
+                действующим законодательством РК. БАДы NUTRILITE™ можно
+                приобрести в Торговых центрах компании ТОО «Эмвэй Казахстан».
+                Адреса Торговых центров, а также наличие продукции можно
+                уточнить на сайте www.kz.amway.com. Вся продукция прошла
+                государственную регистрацию на соответствие требованиям ТР ТС
+                021/2011 «О безопасности пищевой продукции», ТР ТС 022/2011
+                «Пищевая продукция в части ее маркировки». Этикетка продукции
+                NUTRILITE™ может отличаться от представленного изображения в
+                каталоге (в связи с изменениями законодательных требований, а
+                также незначительным изменением формулы продукта).
+            </p>
+        </div>
+
         <script>
+            const handleModalOpenBtn = (type) => {
+                console.log(type)
+                const modal = document.getElementById(`immunity-${type}`)
+                modal.showModal()
+            }
+
             const handleModalOpen = (type) => {
-                console.log(type.id)
                 const modal = document.getElementById(`immunity-${type.id}`)
                 modal.showModal()
             }
@@ -1312,7 +1452,7 @@
                 modal.close()
             }
 
-            function immunityVideoPlay() {
+            const immunityVideoPlay = () => {
                 const cover = document.getElementById(
                     'immunity-organism__video-cover'
                 )
@@ -1329,7 +1469,6 @@
 
             const handleNextBtnClick = (dir) => {
                 const modals = document.body.getElementsByTagName('dialog')
-                console.log(modals)
                 let currentModal
                 for (const modal of modals) {
                     if (modal.open) {

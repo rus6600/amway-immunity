@@ -16,6 +16,7 @@
     --immunity-clr-dark-grey: #2c2c2c;
     --immunity-clr-modal-bg: #6a9c39;
     --immunity-clr-modal-btn: #84b830;
+    --immunity-clr-test-bg: #f8f8f8;
 }
 
 .immunity-container {
@@ -45,7 +46,6 @@
     font-weight: 400;
     font-size: 88.86px;
     align-self: flex-start;
-
     color: var(--immunity-clr-primary);
     line-height: 0.8;
 }
@@ -57,20 +57,36 @@
     font-size: 53.86px;
     font-weight: 400;
     color: var(--immunity-clr-primary);
+    background-color: white;
+    padding-inline: 2px;
 }
 
 .immunity-header__subtitle::after {
-    content: url('assets/Vector\ 1.png');
     position: absolute;
-    top: -270px;
-    left: -40px;
+    top: 50%;
+    content: '';
+    width: 95%;
+    height: 550px;
+    border: 2px solid var(--immunity-clr-primary);
+    border-top-right-radius: 25px;
+    border-inline-start-color: transparent;
+    border-inline-start-color: transredparent;
+    border-block-end-color: transparent;
 }
 
 .immunity-header__subtitle::before {
-    content: url('assets/Vector\ 3.png');
     position: absolute;
-    top: 35px;
-    left: 355px;
+    bottom: 50%;
+    left: -20px;
+    content: '';
+    width: calc(100% + 100px);
+    height: 300px;
+    z-index: -999;
+    border: 2px solid var(--immunity-clr-primary);
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-block-end-color: transparent;
+    border-inline-end-color: transparent;
 }
 
 .immunity-header__shield {
@@ -94,7 +110,6 @@
         'image-left text-lower text-lower'
         'image-left text-lower text-lower';
     grid-template-rows: repeat(6, 145px);
-    /* grid-template-columns: 50% 1fr 1fr; */
 }
 
 .immunity-world-inside__image_right {
@@ -183,18 +198,9 @@
 }
 
 .immunity-organism-fugures {
-    position: relative;
     display: grid;
     padding: 32px 90px;
     grid-template-columns: repeat(4, 1fr);
-}
-
-.immunity-organism-fugures:before {
-    content: url('assets/Vector\ 6.png');
-    position: absolute;
-    right: 5%;
-    top: 27%;
-    z-index: -9999;
 }
 
 .immunity-organism-figure {
@@ -203,19 +209,54 @@
     text-align: center;
 }
 
+.immunity-organism-figure-anchor {
+    position: relative;
+}
+
+.immunity-organism-figure-anchor:before {
+    position: absolute;
+    right: 0;
+    content: '';
+    top: 60px;
+    border: 2px solid var(--immunity-clr-primary);
+    border-block-start-color: var(--immunity-clr-primary);
+    border-inline-start-color: transparent;
+    border-radius: 25px;
+    width: 400px;
+    height: 400px;
+    z-index: -9999;
+}
+
+.immunity-organism-figure-anchor:after {
+    position: absolute;
+    right: 50%;
+    content: '';
+    top: 60px;
+    border-block-start: 2px solid white;
+    width: 500px;
+    height: 400px;
+    z-index: -9999;
+}
+
 .immunity-organism-figure img {
     margin: 0 auto 52px auto;
+    padding-inline: 10px;
+    background-color: white;
 }
 
 .immunity-organism-figure figcaption {
     margin-bottom: 20px;
 }
 
-.immunity-organism-figure a {
+.immunity-organism-figure button {
     margin-top: 20px;
-    text-decoration: none;
-    font-size: 9.422px;
+    border: none;
+    background-color: transparent;
     color: var(--immunity-clr-grey);
+}
+
+.immunity-organism-figure button:hover {
+    cursor: pointer;
 }
 
 .immunity-organism__video {
@@ -276,12 +317,22 @@
     display: grid;
     grid-template-rows: 1fr min-content;
     margin-top: 3rem;
-    /* background-image: url(assets/background.png); */
+}
+
+.immunity-leaf__products > *:nth-child(1) img {
+    transform: rotate(-5deg);
+}
+
+.immunity-leaf__products > *:nth-child(2) img {
+    transform: rotate(5deg);
+}
+.immunity-leaf__products > *:nth-child(3) img {
+    transform: rotate(-3deg);
 }
 
 .immunity-leaf__product {
     display: grid;
-    /* height: 486px; */
+    height: 486px;
     place-items: center;
 }
 
@@ -340,7 +391,7 @@
 
 .immunity-bg {
     grid-area: 1/1;
-    background-image: url(assets/background.png);
+    background-image: url('assets/background.png');
     background-repeat: repeat;
     width: 100vw;
 }
@@ -382,13 +433,14 @@
     background-color: white;
     border: 1px solid #c9c9c9;
     border-radius: 100px;
+    color: var(--immunity-clr-secondary)
 }
 
 .immunity-btn:hover {
     cursor: pointer;
 }
 
-dialog,
+.immunity-modal,
 ::backdrop {
     overscroll-behavior: contain;
 }
@@ -401,6 +453,7 @@ body:has(.immunity-modal[open]) {
     width: 850px;
     align-self: center;
     justify-self: center;
+    margin: auto;
     background-color: transparent;
     border: none;
 }
@@ -421,7 +474,7 @@ body:has(.immunity-modal[open]) {
 .immunity-modal__bg {
     position: relative;
     padding: 68px 32px 12px 32px;
-    background: url('https://ancs.amwaycontent.com/img/nutrilite-immunity/m-top-bg.png');
+    background: url('assets/leafs.png');
     background-repeat: no-repeat;
     background-position: top right;
     overflow-x: hidden;
@@ -563,41 +616,104 @@ body:has(.immunity-modal[open]) {
     color: var(--immunity-clr-grey);
 }
 
-.clr-secondary {
-    color: var(--immunity-clr-secondary);
-}
-
 .immunity-mt-top-auto {
     margin-top: auto;
 }
 
-.fw-400 {
+.immunity-test {
+    padding: 5rem 10rem;
+}
+
+.immunity-test__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--immunity-clr-test-bg);
+}
+
+.immunity-test__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+}
+
+.immunity-test__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.immunity-test__title h3 {
+    font-size: 53.86px;
     font-weight: 400;
+    color: var(--immunity-clr-primary);
 }
 
-.fw-500 {
-    font-weight: 500;
+.immunity-test__desc p {
+    width: 70%;
+    line-height: 30px;
+    font-size: 22px;
+    color: var(--immunity-clr-black);
 }
 
-.fw-700 {
+.immunity-test__desc_btn {
+    width: fit-content;
+    padding: 13px 35px;
+    border: none;
+    background-color: var(--immunity-clr-primary);
+    color: white;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.immunity-test__desc_btn:hover {
+    cursor: pointer;
+}
+
+.immunity__caution {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.immunity__caution img {
+    width: 70%;
+}
+
+.immunity__caution {
+    color: var(--immunity-clr-grey);
+}
+
+.immunity__caution span {
+    color: var(--immunity-clr-dark-grey);
+}
+
+.immunity-clr-secondary {
+    color: var(--immunity-clr-secondary);
+}
+
+.immunity-fw-700 {
     font-weight: 700;
 }
 
-dialog {
-    animation: fade-out 0.4s ease-out;
+.immunity-modal {
+    animation: immunity-fade-out 0.4s ease-out;
 }
 
-dialog[open] {
-    animation: fade-in 0.4s ease-out;
+.immunity-modal[open] {
+    animation: immunity-fade-in 0.4s ease-out;
 }
 
-dialog[open]::backdrop {
-    animation: backdrop-fade-in 0.4s ease-out forwards;
+.immunity-modal[open]::backdrop {
+    animation: immunity-backdrop-fade-in 0.4s ease-out forwards;
 }
 
 /* Animation keyframes */
 
-@keyframes fade-in {
+@keyframes immunity-fade-in {
     0% {
         opacity: 0;
         display: none;
@@ -609,7 +725,7 @@ dialog[open]::backdrop {
     }
 }
 
-@keyframes fade-out {
+@keyframes immunity-fade-out {
     0% {
         opacity: 1;
         display: block;
@@ -621,7 +737,7 @@ dialog[open]::backdrop {
     }
 }
 
-@keyframes backdrop-fade-in {
+@keyframes immunity-backdrop-fade-in {
     0% {
         background-color: rgb(0 0 0 / 0%);
     }
