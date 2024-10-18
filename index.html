@@ -1485,29 +1485,28 @@
                     currentModal.close()
                 }
             }
-            const dots = [...document.getElementById('immunity-leafs__dots').children]
+            const dots = [
+                ...document.getElementById('immunity-leafs__dots').children,
+            ]
             const targetNode = document.getElementById('immunity-leafs')
             const handleScroll = (e) => {
                 const { width } = targetNode.getBoundingClientRect()
                 const scrollLeft = targetNode.scrollLeft
-                const newIndex = scrollLeft/width;
-
+                const newIndex = scrollLeft / width
+                console.log(newIndex)
                 dots.forEach((node, id) => {
                     const classList = [...node.classList]
-                    if (classList.includes('immunity-leafs__dot_active') && id !== newIndex) {
+                    if (
+                        classList.includes('immunity-leafs__dot_active') &&
+                        id !== newIndex
+                    ) {
                         node.classList.remove('immunity-leafs__dot_active')
                         return
-                    } 
+                    }
                     if (id === newIndex) {
                         node.classList.add('immunity-leafs__dot_active')
                     }
                 })
-
-                // console.log(dots)
-                // prev.classList.remove('immunity-leafs__dot_active')
-                // const next = document.getElementById(`immunity-leafs__dot-${newIndex}`)
-                // next.classList.add('immunity-leafs__dot_active')
-                
             }
             targetNode.addEventListener('scrollend', handleScroll)
         </script>
