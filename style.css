@@ -586,6 +586,8 @@ body {
         align-items: center;
         justify-content: center;
         width: 100vw;
+        height: 100%;
+        overflow-y: hidden;
         scroll-snap-align: center;
     }
     .immunity-leaf__product_img_wrapper {
