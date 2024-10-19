@@ -100,7 +100,10 @@
                 </p>
                 <p class="immunity-fw-700">Иммунитет имеет 4 линии защиты</p>
             </div>
-            <div class="immunity-organism-fugures">
+            <div
+                id="immunity-organism-fugures"
+                class="immunity-organism-fugures"
+            >
                 <figure class="immunity-organism-figure">
                     <img src="assets/shield.png" alt="shiled icon" />
                     <figcaption>
@@ -156,6 +159,15 @@
                     </button>
                 </figure>
             </div>
+            <div id="immunity-figures__dots" class="immunity__dots">
+                <div
+                    id="immunity-figures__dot-1"
+                    class="immunity__dot immunity__dot_active"
+                ></div>
+                <div id="immunity-figures__dot-2" class="immunity__dot"></div>
+                <div id="immunity-figures__dot-3" class="immunity__dot"></div>
+                <div id="immunity-figures__dot-4" class="immunity__dot"></div>
+            </div>
             <div class="immunity-organism__video">
                 <div class="immunity-video-wrapper">
                     <img
@@ -188,14 +200,18 @@
         <section class="immunity-leafs">
             <div id="immunity-leafs" class="immunity-leafs__products">
                 <div id="leaf__product-1" class="immunity-leafs__product">
-                    <img
-                        class="immunity-leaf__product_img"
-                        src="assets/pills1.png"
-                        alt="витамин С +"
-                    />
+                    <div class="immunity-leaf__product_img_wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pills1.png"
+                            alt="витамин С +"
+                        />
+                    </div>
                     <div class="immunity-leafs__product__desc">
-                        <img src="assets/sign.png" alt="sign icon" />
-                        <h3>Витамин С</h3>
+                        <div class="immunity-leafs__product__desk_title">
+                            <img src="assets/sign.png" alt="sign icon" />
+                            <h3>Витамин С</h3>
+                        </div>
                         <p>
                             Витамин С способствует устойчивости клеток к
                             неблагоприятным воздействиям
@@ -210,14 +226,18 @@
                     </div>
                 </div>
                 <div id="leaf__product-2" class="immunity-leafs__product">
-                    <img
-                        class="immunity-leaf__product_img"
-                        src="assets/pills2.png"
-                        alt="витамин D"
-                    />
+                    <div class="immunity-leaf__product_img_wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pills2.png"
+                            alt="витамин D"
+                        />
+                    </div>
                     <div class="immunity-leafs__product__desc">
-                        <img src="assets/sign.png" alt="sign icon" />
-                        <h3>Витамин D</h3>
+                        <div class="immunity-leafs__product__desk_title">
+                            <img src="assets/sign.png" alt="sign icon" />
+                            <h3>Витамин D</h3>
+                        </div>
                         <p>Участвует в координации иммунного ответа</p>
                         <button
                             id="modal2"
@@ -229,14 +249,18 @@
                     </div>
                 </div>
                 <div id="leaf__product-3" class="immunity-leafs__product">
-                    <img
-                        class="immunity-leaf__product_img"
-                        src="assets/pills3.png"
-                        alt="Плюс"
-                    />
+                    <div class="immunity-leaf__product_img_wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pills3.png"
+                            alt="Плюс"
+                        />
+                    </div>
                     <div class="immunity-leafs__product__desc">
-                        <img src="assets/sign.png" alt="sign icon" />
-                        <h3>Эхинацея</h3>
+                        <div class="immunity-leafs__product__desk_title">
+                            <img src="assets/sign.png" alt="sign icon" />
+                            <h3>Эхинацея</h3>
+                        </div>
                         <p>
                             Поможет научить ваши умные иммунные клетки работать
                         </p>
@@ -250,14 +274,18 @@
                     </div>
                 </div>
                 <div id="leaf__product-4" class="immunity-leafs__product">
-                    <img
-                        class="immunity-leaf__product_img"
-                        src="assets/pills4.png"
-                        alt="Цинт селен"
-                    />
+                    <div class="immunity-leaf__product_img_wrapper">
+                        <img
+                            class="immunity-leaf__product_img"
+                            src="assets/pills4.png"
+                            alt="Цинт селен"
+                        />
+                    </div>
                     <div class="immunity-leafs__product__desc">
-                        <img src="assets/sign.png" alt="sign icon" />
-                        <h3>Цинк + Cелен</h3>
+                        <div class="immunity-leafs__product__desk_title">
+                            <img src="assets/sign.png" alt="sign icon" />
+                            <h3>Цинк + Cелен</h3>
+                        </div>
                         <p>Для поддержания иммунитета,кожи и волос</p>
                         <button
                             id="modal4"
@@ -269,23 +297,14 @@
                     </div>
                 </div>
             </div>
-            <div id="immunity-leafs__dots" class="immunity-leafs__dots">
+            <div id="immunity-leafs__dots" class="immunity__dots">
                 <div
                     id="immunity-leafs__dot-1"
-                    class="immunity-leafs__dot immunity-leafs__dot_active"
+                    class="immunity__dot immunity__dot_active"
                 ></div>
-                <div
-                    id="immunity-leafs__dot-2"
-                    class="immunity-leafs__dot"
-                ></div>
-                <div
-                    id="immunity-leafs__dot-3"
-                    class="immunity-leafs__dot"
-                ></div>
-                <div
-                    id="immunity-leafs__dot-4"
-                    class="immunity-leafs__dot"
-                ></div>
+                <div id="immunity-leafs__dot-2" class="immunity__dot"></div>
+                <div id="immunity-leafs__dot-3" class="immunity__dot"></div>
+                <div id="immunity-leafs__dot-4" class="immunity__dot"></div>
             </div>
         </section>
         <!-- Modals -->
@@ -1485,13 +1504,19 @@
                     currentModal.close()
                 }
             }
-            const dots = [
+            const dotsFigures = [
+                ...document.getElementById('immunity-figures__dots').children,
+            ]
+            const containerFigure = document.getElementById(
+                'immunity-organism-fugures'
+            )
+            const dotsLeaf = [
                 ...document.getElementById('immunity-leafs__dots').children,
             ]
-            const targetNode = document.getElementById('immunity-leafs')
-            const handleScroll = (e) => {
-                const { width } = targetNode.getBoundingClientRect()
-                const scrollLeft = targetNode.scrollLeft
+            const containerLeaf = document.getElementById('immunity-leafs')
+            const handleScroll = (container, dots) => {
+                const { width } = container.getBoundingClientRect()
+                const scrollLeft = container.scrollLeft
                 const newIndex = scrollLeft / width
                 if (
                     newIndex === 0 ||
@@ -1499,23 +1524,27 @@
                     newIndex === 2 ||
                     newIndex === 3
                 ) {
-                    console.log(newIndex)
                     dots.forEach((node, id) => {
                         const classList = [...node.classList]
                         if (
-                            classList.includes('immunity-leafs__dot_active') &&
+                            classList.includes('immunity__dot_active') &&
                             id !== newIndex
                         ) {
-                            node.classList.remove('immunity-leafs__dot_active')
+                            node.classList.remove('immunity__dot_active')
                             return
                         }
                         if (id === newIndex) {
-                            node.classList.add('immunity-leafs__dot_active')
+                            node.classList.add('immunity__dot_active')
                         }
                     })
                 }
             }
-            targetNode.addEventListener('scroll', handleScroll)
+            containerLeaf.addEventListener('scroll', () =>
+                handleScroll(containerLeaf, dotsLeaf)
+            )
+            containerFigure.addEventListener('scroll', () =>
+                handleScroll(containerFigure, dotsFigures)
+            )
         </script>
     </body>
 </html>
