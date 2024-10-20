@@ -30,6 +30,12 @@ body {
     margin-inline: auto;
 }
 
+@media (min-width: 1024px) {
+    .immunity-container {
+        padding-inline: 2rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .immunity-container {
         width: 100%;
@@ -118,7 +124,7 @@ body {
     object-fit: contain;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity-header {
         margin-inline: auto;
         padding-inline: 2rem;
@@ -147,6 +153,39 @@ body {
     }
     .immunity-header__shield {
         display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .immunity-header {
+        padding-inline: 2rem;
+    }
+    .immunity-header__subtitle::after {
+        position: absolute;
+        top: 15vw;
+        content: '';
+        width: 50%;
+        height: 300px;
+        border: 2px solid var(--immunity-clr-primary);
+        border-top-right-radius: 25px;
+        border-inline-start-color: transparent;
+        border-inline-start-color: transparent;
+        border-block-end-color: transparent;
+    }
+
+    .immunity-header__subtitle::before {
+        position: absolute;
+        bottom: 100%;
+        width: 60vw;
+        left: 5%;
+        content: '';
+        height: 250px;
+        z-index: -999;
+        border: 2px solid var(--immunity-clr-primary);
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 25px;
+        border-block-end-color: transparent;
+        border-inline-end-color: transparent;
     }
 }
 
@@ -180,6 +219,7 @@ body {
 }
 
 .immunity-world-inside__image_left::after {
+    display: block;
     content: url('assets/woman.png');
     position: absolute;
     top: -45%;
@@ -198,11 +238,14 @@ body {
     display: flex;
     grid-area: text-upper;
     align-self: center;
+    gap: 0.5rem;
     flex-direction: column;
     align-self: flex-start;
     color: var(--immunity-clr-black);
     font-size: 17.859px;
     line-height: 24px;
+    background-color: white;
+    z-index: 999;
 }
 
 .immunity-world-inside__text_upper p {
@@ -211,6 +254,9 @@ body {
 
 .immunity-world-inside__text_lower {
     grid-area: text-lower;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-self: flex-start;
     justify-self: flex-start;
     margin-top: 4.5rem;
@@ -220,7 +266,7 @@ body {
     font-size: 53.86px;
     font-weight: 400;
     color: var(--immunity-clr-primary);
-    line-height: 24px;
+    line-height: 1.1;
 }
 
 .immunity-world-inside__text_lower p {
@@ -229,20 +275,59 @@ body {
     line-height: 24px;
 }
 
-.immunity-world-inside__text_lower p:nth-of-type(1) {
-    margin-top: 2rem;
-}
-
-.immunity-world-inside__text_lower p:nth-of-type(2) {
-    margin-top: 2rem;
-}
-
 @media (max-width: 1024px) {
     .immunity-world-inside {
-        display: grid;
+        grid-template-rows: repeat(6, 200px);
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+    .immunity-world-inside__text_upper {
+        grid-area: 1/1/2/3;
+    }
+
+    .immunity-world-inside__image_right {
+        grid-area: 1/3/3/4;
+        align-self: center;
+        justify-self: center;
+        margin: auto;
+    }
+    .immunity-world-inside__image_left {
+        grid-area: 3/1/5/2;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .immunity-world-inside__image_left::before {
+        transform: scale(0.7);
+    }
+
+    .immunity-world-inside__text_lower {
+        grid-area: 3/2/4/4;
+        margin-top: 0;
+    }
+
+    .immunity-world-inside__image_left::after {
+        top: -80%;
+        left: -10%;
+    }
+    .immunity-world-inside__text_lower h2 {
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .immunity-world-inside__text_lower p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .immunity-world-inside {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
         margin-top: 1rem;
         order: 2;
         grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
         row-gap: 1rem;
     }
 
@@ -251,24 +336,25 @@ body {
     }
 
     .immunity-world-inside__text_upper {
-        grid-area: 1/1/2/2;
+        order: 1;
         padding-inline: 2rem;
     }
 
     .immunity-world-inside__image_right {
-        grid-area: 2/1/3/2;
+        order: 2;
         margin: unset;
         justify-self: auto;
         align-self: auto;
     }
     .immunity-world-inside__image_left {
-        grid-area: 4/1/5/2;
+        order: 4;
         justify-self: auto;
         align-self: auto;
         width: 100%;
     }
+
     .immunity-world-inside__text_lower {
-        grid-area: 3/1/4/2;
+        order: 3;
         padding-inline: 2rem;
     }
     .immunity-world-inside__text_lower p {
@@ -280,7 +366,7 @@ body {
     }
 
     .immunity-world-inside img {
-        width: 100vw;
+        width: 100%;
     }
     .immunity-world-inside__image_left::after {
         display: none;
@@ -368,7 +454,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity-organism {
         margin-top: 3rem;
         order: 3;
@@ -478,7 +564,7 @@ body {
     left: -45px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity-organism__video {
         display: none;
     }
@@ -544,7 +630,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity-leafs {
         position: relative;
         height: 500px;
@@ -633,14 +719,12 @@ body {
     cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-    .immunity-modal,
-    ::backdrop {
-        overscroll-behavior: contain;
-    } 
-    body:has(.immunity-modal[open]) {
-        overflow: hidden;
-    }
+.immunity-modal,
+::backdrop {
+    overscroll-behavior: contain;
+}
+body:has(.immunity-modal[open]) {
+    overflow: hidden;
 }
 
 .immunity-modal {
@@ -651,10 +735,6 @@ body {
     background-color: transparent;
     border: none;
 }
-
-/* .immunity-modal::-webkit-scrollbar {
-    display: none;
-} */
 
 .immunity-modal__btn-prev {
     display: inline-block;
@@ -686,7 +766,7 @@ body {
 }
 
 .immunity-modal__navbtn-prev {
-    align-self: ce;
+    align-self: center;
 }
 
 .immunity-modal__navbtn:hover {
@@ -810,6 +890,42 @@ body {
     color: var(--immunity-clr-grey);
 }
 
+@media (max-width: 768px) {
+    .immunity-modal {
+        width: 100%;
+    }
+    .immunity-modal__title {
+        padding: 1rem;
+    }
+
+    .immunity-modal__title::after {
+        display: none;
+    }
+    .immunity-modal__navbtn {
+        display: none;
+    }
+
+    .immunity-modal__bg {
+        padding: 0;
+    }
+
+    .immunity-modal__product_img {
+        display: none;
+    }
+    .immunity-modal__closebtn {
+        top: 20px;
+        right: 15px;
+        z-index: 999999;
+    }
+    .immunity-modal__tips {
+        padding: 0.5rem 1rem;
+        gap: 1rem;
+    }
+    .immunity-modal__tip p {
+        line-height: 1.2;
+    }
+}
+
 .immunity-mt-top-auto {
     margin-top: auto;
 }
@@ -825,7 +941,7 @@ body {
     background-color: var(--immunity-clr-test-bg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity-test {
         margin-top: 0;
         margin-bottom: 2rem;
@@ -903,7 +1019,7 @@ body {
     color: var(--immunity-clr-grey);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .immunity__caution {
         padding: 2rem;
         order: 6;
