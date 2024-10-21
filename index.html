@@ -125,6 +125,7 @@
                 <div
                     id="immunity-organism-fugures"
                     class="immunity-organism-fugures"
+                    onscroll="handleScroll('immunity-organism-fugures')"
                 >
                     <figure class="immunity-organism-figure">
                         <img
@@ -243,7 +244,11 @@
                 </div>
             </section>
             <section class="immunity-leafs">
-                <div id="immunity-leafs" class="immunity-leafs__products">
+                <div
+                    onscroll="handleScroll('immunity-leafs')"
+                    id="immunity-leafs"
+                    class="immunity-leafs__products"
+                >
                     <div id="leaf__product-1" class="immunity-leafs__product">
                         <div class="immunity-leaf__product_img_wrapper">
                             <img
@@ -619,17 +624,19 @@
                                     организма.
                                 </p>
                             </div>
-                            <p class="immunity-modal__tips_notes">
-                                * Takeuchi A., Reddy G.S., Kobayashi T., et al.
-                                Nuclear factor of activated T cells (NFAT) as a
-                                molecular target for 1alpha,25- dihydroxyvitamin
-                                D3-mediated effects // J Immunol. – 1998. –Vol.
-                                160. – Р.209-218
-                            </p>
+                            <div class="immunity-modal__tips_notes">
+                                <p>
+                                    * Takeuchi A., Reddy G.S., Kobayashi T., et
+                                    al. Nuclear factor of activated T cells
+                                    (NFAT) as a molecular target for 1alpha,25-
+                                    dihydroxyvitamin D3-mediated effects // J
+                                    Immunol. – 1998. –Vol. 160. – Р.209-218
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <button
-                        class="immunity-modal__navbtn immunity-modal__navbtn-prev"
+                        class="immunity-modal__navbtn immunity-modal__navbtn-next"
                         onclick="handleNextBtnClick('next')"
                     >
                         <svg
@@ -853,25 +860,28 @@
                                     избыточной воспалительной реакции**
                                 </p>
                             </div>
-                            <p class="immunity-modal__tips_notes">
-                                *Takeuchi A., Reddy G.S., Kobayashi T., et al.
-                                Nuclear factor of activated T cells (NFAT) as a
-                                molecular target for 1alpha,25- dihydroxyvitamin
-                                D3-mediated effects // J Immunol. – 1998. –Vol.
-                                160. – Р.209-218
-                            </p>
-                            <p class="immunity-modal__tips_notes">
-                                **Yong Zhang, Donald Y. M. Leung, Brittany N.
-                                Richers, Yusen Liu, Linda K. Remigio, David W.
-                                Riches, And Elena Goleva. Vitamin D Inhibits
-                                Monocyte/Macrophage Proinflammatory Cytokine
-                                Production by Targeting MAPK Phosphatase-1. The
-                                Journal of Immunology, March 1, 2012
-                            </p>
+                            <div class="immunity-modal__tips_notes">
+                                <p>
+                                    *Takeuchi A., Reddy G.S., Kobayashi T., et
+                                    al. Nuclear factor of activated T cells
+                                    (NFAT) as a molecular target for 1alpha,25-
+                                    dihydroxyvitamin D3-mediated effects // J
+                                    Immunol. – 1998. –Vol. 160. – Р.209-218
+                                </p>
+                                <p>
+                                    **Yong Zhang, Donald Y. M. Leung, Brittany
+                                    N. Richers, Yusen Liu, Linda K. Remigio,
+                                    David W. Riches, And Elena Goleva. Vitamin D
+                                    Inhibits Monocyte/Macrophage Proinflammatory
+                                    Cytokine Production by Targeting MAPK
+                                    Phosphatase-1. The Journal of Immunology,
+                                    March 1, 2012
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <button
-                        class="immunity-modal__navbtn immunity-modal__navbtn-prev"
+                        class="immunity-modal__navbtn immunity-modal__navbtn-next"
                         onclick="handleNextBtnClick('next')"
                     >
                         <svg
@@ -1120,26 +1130,26 @@
                                     будут бороться с вирусами и бактериями.
                                 </p>
                             </div>
-                            <p class="immunity-modal__tips_notes">
-                                1.Tympher K.D. Der immunologishe
-                                Wirkungsnackweis von Pflanzenextraken // Z.
-                                Angeu. Phytother. 1981. Vol.5. P. 181–184.
-                            </p>
-                            <p class="immunity-modal__tips_notes">
-                                2.Stotzem C.D., Hangerland U., Mengs U.
-                                Influence of Echinacea purpurea on the
-                                phagocetosis of human granulocytes // Med.
-                                Sci.Res. 1992. Vol.20. P. 719.
-                            </p>
-                            <p class="immunity-modal__tips_notes">
-                                3.Percival S.S. Use of echinacea in medicine //
-                                Biochemical Pharmacology. 2000. Vol. 60. P.
-                                155–158.
-                            </p>
+                            <div class="immunity-modal__tips_notes">
+                                <p>
+                                    1.Tympher K.D. Der immunologishe
+                                    Wirkungsnackweis von Pflanzenextraken // Z.
+                                    Angeu. Phytother. 1981. Vol.5. P. 181–184.
+                                </p>
+                                <p>
+                                    2.Stotzem C.D., Hangerland U., Mengs U.
+                                    Influence of Echinacea purpurea on the
+                                    phagocetosis of human granulocytes // Med.
+                                    Sci.Res. 1992. Vol.20. P. 719. 3.Percival
+                                    S.S. Use of echinacea in medicine //
+                                    Biochemical Pharmacology. 2000. Vol. 60. P.
+                                    155–158.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <button
-                        class="immunity-modal__navbtn immunity-modal__navbtn-prev"
+                        class="immunity-modal__navbtn immunity-modal__navbtn-next"
                         onclick="handleNextBtnClick('next')"
                     >
                         <svg
@@ -1355,19 +1365,22 @@
                                     что они не будут «воевать» со своими.
                                 </p>
                             </div>
-                            <p class="immunity-modal__tips_notes">
-                                1.Turing A. The chemical basis of morpho-genesis
-                                // Trans. Roy. Soc. 1952. V. 237. P. 32
-                            </p>
-                            <p class="immunity-modal__tips_notes">
-                                2. Донцов В.И. Применение теории гиперцикла для
-                                анализа процессов межклеточной регуляции
-                                пролиферации тканей: доказательства
-                                существования специализированной клеточной
-                                системы регуляции пролиферации тканей // Успехи
-                                современной биологии. 1986. Т. 101. Вып.1. С.
-                                18.
-                            </p>
+                            <div class="immunity-modal__tips_notes">
+                                <p>
+                                    1.Turing A. The chemical basis of
+                                    morpho-genesis // Trans. Roy. Soc. 1952. V.
+                                    237. P. 32
+                                </p>
+                                <p>
+                                    2. Донцов В.И. Применение теории гиперцикла
+                                    для анализа процессов межклеточной регуляции
+                                    пролиферации тканей: доказательства
+                                    существования специализированной клеточной
+                                    системы регуляции пролиферации тканей //
+                                    Успехи современной биологии. 1986. Т. 101.
+                                    Вып.1. С. 18.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <button
@@ -1500,12 +1513,18 @@
                         </a>
                     </div>
                     <div class="immunity-test__img">
-                        <img src="https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/womanandchildren.png" alt="" />
+                        <img
+                            src="https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/womanandchildren.png"
+                            alt=""
+                        />
                     </div>
                 </div>
             </section>
             <section class="immunity__caution immunity-container">
-                <img src="https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/caution.png" alt="caution text" />
+                <img
+                    src="https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/caution.png"
+                    alt="caution text"
+                />
                 <p>
                     Продукция прошла регистрацию в Комитете
                     санитарно-эпидемиологического контроля Министерства
@@ -1567,12 +1586,23 @@
                 }
                 const prevModal = currentModal.previousElementSibling
                 const nextModal = currentModal.nextElementSibling
+
                 if (dir === 'prev') {
+                    if (!prevModal.id.includes('immunity-modal')) {
+                        modals[3].showModal()
+                        currentModal.close()
+                        return
+                    }
                     prevModal.showModal()
                     currentModal.close()
                     return
                 }
                 if (dir === 'next') {
+                    if (!nextModal.id.includes('immunity-modal')) {
+                        modals[0].showModal()
+                        currentModal.close()
+                        return
+                    }
                     nextModal.showModal()
                     currentModal.close()
                 }
@@ -1587,7 +1617,15 @@
                 ...document.getElementById('immunity-leafs__dots').children,
             ]
             const containerLeaf = document.getElementById('immunity-leafs')
-            const handleScroll = (container, dots) => {
+            const handleScroll = (containerId) => {
+                let container, dots
+                if ((containerId === 'immunity-leafs')) {
+                    container = containerLeaf
+                    dots = dotsLeaf
+                } else {
+                    container = containerFigure
+                    dots = dotsFigures
+                }
                 const { width } = container.getBoundingClientRect()
                 const scrollLeft = container.scrollLeft
                 const newIndex = scrollLeft / width
@@ -1596,7 +1634,7 @@
                     newIndex === 1 ||
                     newIndex === 2 ||
                     newIndex === 3
-                ) { 
+                ) {
                     dots.forEach((node, id) => {
                         const classList = [...node.classList]
                         if (
@@ -1612,12 +1650,6 @@
                     })
                 }
             }
-            containerLeaf.addEventListener('scroll', () =>
-                handleScroll(containerLeaf, dotsLeaf)
-            )
-            containerFigure.addEventListener('scroll', () =>
-                handleScroll(containerFigure, dotsFigures)
-            )
         </script>
     </body>
 </html>

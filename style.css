@@ -1,13 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family:
-        Roboto Condensed,
-        sans-serif;
-
-}
-
 :root {
     --immunity-containerWidth: 1100px;
     --immunity-clr-primary: #006d47;
@@ -26,6 +16,9 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    font-family:
+        Roboto Condensed,
+        sans-serif;
 }
 
 .immunity-container {
@@ -480,9 +473,11 @@
         display: grid;
         width: 100%;
         padding: 0;
+        width: 100vw;
+        margin-inline: auto;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        scroll-snap-stop: always;
+        -ms-overflow-style: none;
         scrollbar-width: none;
     }
 
@@ -625,7 +620,6 @@
 .immunity-leafs__product__desk_title h3 {
     margin: auto;
     font-size: 1.5em;
-
 }
 
 .immunity-btn {
@@ -752,8 +746,21 @@ body:has(.immunity-modal[open]) {
     align-self: center;
     justify-self: center;
     margin: auto;
+    height: 90%;
     background-color: transparent;
     border: none;
+    overflow-y: scroll;
+}
+
+.immunity-modal__content {
+    height: 100%;
+}
+
+.immunity-modal__content__inner {
+    height: 100%;
+
+    width: 80%;
+    margin-inline: auto;
 }
 
 .immunity-modal__btn-prev {
@@ -783,10 +790,6 @@ body:has(.immunity-modal[open]) {
     aspect-ratio: 1/1;
     border: none;
     border-radius: 50%;
-}
-
-.immunity-modal__navbtn-prev {
-    align-self: center;
 }
 
 .immunity-modal__navbtn:hover {
@@ -905,6 +908,9 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal__tips_notes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     font-size: 14px;
     line-height: 18px;
     color: var(--immunity-clr-grey);
@@ -951,7 +957,7 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-test {
-    margin-top: 300px;
+    margin-top: 350px;
     padding: 5rem 10rem;
 }
 
