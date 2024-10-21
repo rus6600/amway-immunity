@@ -5,10 +5,11 @@
     font-family:
         Roboto Condensed,
         sans-serif;
+
 }
 
 :root {
-    --containerWidth: 1200px;
+    --immunity-containerWidth: 1100px;
     --immunity-clr-primary: #006d47;
     --immunity-clr-secondary: #1a6349;
     --immunity-clr-black: #000000;
@@ -19,14 +20,16 @@
     --immunity-clr-test-bg: #f8f8f8;
 }
 
-body {
+.immunity-wrapper {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
 }
 
 .immunity-container {
-    width: min(100%, var(--containerWidth));
+    width: min(100%, var(--immunity-containerWidth));
     margin-inline: auto;
 }
 
@@ -220,14 +223,14 @@ body {
 
 .immunity-world-inside__image_left::after {
     display: block;
-    content: url('assets/woman.png');
+    content: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/woman.png');
     position: absolute;
     top: -45%;
     left: -45%;
 }
 
 .immunity-world-inside__image_left::before {
-    content: url('assets/Vector.png');
+    content: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/Vector.png');
     position: absolute;
     top: 37%;
     right: -27%;
@@ -385,6 +388,7 @@ body {
 
 .immunity-organism__title {
     width: 70%;
+    line-height: 1.1;
     margin-inline: auto;
     font-size: 29.883px;
     text-align: center;
@@ -395,6 +399,7 @@ body {
     width: 100%;
     margin-top: 46px;
     grid-template-columns: repeat(4, 1fr);
+    background-color: white;
 }
 
 .immunity-organism-figure {
@@ -558,7 +563,7 @@ body {
 }
 
 .immunity-organism__video p:before {
-    content: url(assets/playbtn.png);
+    content: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/playbtn.png');
     position: absolute;
     bottom: 15px;
     left: -45px;
@@ -576,14 +581,14 @@ body {
 .immunity-leafs {
     margin-top: 86px;
     height: 486px;
-    background: url('assets/background.png');
+    background: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/background.png');
 }
 
 .immunity-leafs__products {
     display: grid;
     height: 100%;
     grid-template-columns: repeat(4, 1fr);
-    width: min(100%, var(--containerWidth));
+    width: min(100%, var(--immunity-containerWidth));
     margin-inline: auto;
 }
 
@@ -608,13 +613,19 @@ body {
 }
 
 .immunity-leafs__product__desc p {
-    width: 60%;
+    width: 80%;
 }
 
 .immunity-leafs__product__desk_title {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.immunity-leafs__product__desk_title h3 {
+    margin: auto;
+    font-size: 1.5em;
+
 }
 
 .immunity-btn {
@@ -642,7 +653,7 @@ body {
     }
 
     .immunity-leafs:before {
-        content: url(assets/background.png);
+        content: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/background.png');
         position: absolute;
         top: 0;
         height: 250px;
@@ -728,6 +739,15 @@ body:has(.immunity-modal[open]) {
 }
 
 .immunity-modal {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.immunity-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.immunity-modal {
     width: 850px;
     align-self: center;
     justify-self: center;
@@ -748,7 +768,7 @@ body:has(.immunity-modal[open]) {
 .immunity-modal__bg {
     position: relative;
     padding: 68px 32px 12px 32px;
-    background: url('assets/leafs.png');
+    background: url('https://content.amwayservices.kz/assets/hybris-products/programs/immunity/assets/leafs.png');
     background-repeat: no-repeat;
     background-position: top right;
     overflow-x: hidden;
